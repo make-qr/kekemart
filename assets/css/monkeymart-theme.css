@@ -14,6 +14,22 @@
   --accent-soft: rgba(34, 197, 94, 0.18);
 }
 
+/* Search bar: hide "/" keyboard hint (shows as stray character in topbar) */
+.topbar form.search kbd {
+  display: none !important;
+}
+
+/* WG toasts / FABs not used on static deploy */
+.rateit-toast,
+.beaten-toast,
+.hotnot-toast,
+.install-success-toast,
+.auth-welcome-toast,
+#fmgFab,
+.surprise-fab {
+  display: none !important;
+}
+
 /* Hide WG backend / sign-in / publisher features */
 #authControl,
 #authModal,

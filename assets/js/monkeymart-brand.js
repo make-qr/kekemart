@@ -147,6 +147,49 @@
         a.textContent = 'Home';
       }
     });
+    document.querySelectorAll('.top-nav').forEach(function (nav) {
+      if (nav.dataset.mmTopNav) return;
+      var links = nav.querySelectorAll('a');
+      if (links.length !== 1) return;
+      var only = links[0];
+      var catHref = p + 'games-catalogue.html';
+      if ((only.getAttribute('href') || '').indexOf('games-catalogue') === -1) return;
+      only.classList.remove('active');
+      only.textContent = 'All games';
+      var home = document.createElement('a');
+      home.setAttribute('href', p + 'index.html');
+      home.textContent = 'Home';
+      nav.insertBefore(home, only);
+      nav.dataset.mmTopNav = '1';
+    });
+  }
+
+  function hidePublisherOverlays() {
+    var re = /Lỗi mà chỉ|Error that only you will see|Error that only you/i;
+    function scan() {
+      document.querySelectorAll('body div, body span, body ins').forEach(function (el) {
+        if (el.closest('.topbar, .rail, footer, .player-frame, .embed-modal')) return;
+        var t = (el.textContent || '').trim();
+        if (!t || t.length > 180 || !re.test(t)) return;
+        var box = el;
+        for (var i = 0; i < 4 && box.parentElement; i++) {
+          if (box.style.position === 'fixed' || (box.className && String(box.className).indexOf('toast') !== -1)) break;
+          box = box.parentElement;
+        }
+        box.style.setProperty('display', 'none', 'important');
+        box.setAttribute('aria-hidden', 'true');
+      });
+    }
+    scan();
+    try {
+      new MutationObserver(scan).observe(document.body, { childList: true, subtree: true });
+    } catch (e) {}
+  }
+
+  function patchSearchKbd() {
+    document.querySelectorAll('.topbar form.search kbd').forEach(function (el) {
+      el.remove();
+    });
   }
 
   function patchRail() {
@@ -212,12 +255,14 @@
   function run() {
     if (done) return;
     done = true;
+    patchSearchKbd();
     patchBrand();
     patchLinks();
     patchSearch();
     patchTopNav();
     patchRail();
     patchFooter();
+    hidePublisherOverlays();
   }
 
   if (document.readyState === 'loading') {
