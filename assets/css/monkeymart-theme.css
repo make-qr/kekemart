@@ -19,6 +19,29 @@
   display: none !important;
 }
 
+/* Topbar: align Games + theme toggle to the right (auth/business hidden on static deploy) */
+@media (min-width: 880px) {
+  .topbar .top-nav {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .topbar .theme-btn {
+    flex-shrink: 0;
+    margin-left: 2px;
+  }
+}
+
+.topbar .top-nav a.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.topbar .top-nav a.active:hover {
+  background: var(--accent-deep);
+  color: #fff;
+}
+
 /* WG toasts / FABs not used on static deploy */
 .rateit-toast,
 .beaten-toast,
