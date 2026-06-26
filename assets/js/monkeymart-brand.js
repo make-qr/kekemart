@@ -138,10 +138,6 @@
   function patchTopNav() {
     var p = pagePrefix();
     var onCatalogue = location.pathname.indexOf('games-catalogue') !== -1;
-    var onHome =
-      location.pathname.endsWith('/') ||
-      location.pathname.endsWith('/index.html') ||
-      /\/kekemart\/?$/.test(location.pathname);
 
     document.querySelectorAll('.top-nav').forEach(function (nav) {
       Array.prototype.slice.call(nav.querySelectorAll('a')).forEach(function (a) {
@@ -168,7 +164,7 @@
         if (/^all games$/i.test(label)) a.textContent = 'Games';
         var href = a.getAttribute('href') || '';
         if (href.indexOf('games-catalogue') === -1) return;
-        a.classList.toggle('active', onCatalogue || onHome);
+        a.classList.toggle('active', onCatalogue);
       });
     });
   }
