@@ -19,39 +19,66 @@
   display: none !important;
 }
 
-/* Topbar: push search + Games + theme to the right (WG hides .top-spacer <1024px) */
+/* Topbar: right cluster (search + Games + theme) — immune to WG .search flex:1 / top-spacer rules */
 .topbar .top-spacer {
   display: none !important;
 }
 
+.topbar .topbar-end {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto !important;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.topbar .topbar-end form.search,
 .topbar form.search {
   flex: 0 1 420px !important;
   max-width: min(420px, 42vw) !important;
   min-width: 160px;
-  margin-left: auto !important;
+  margin-left: 0 !important;
+  width: auto !important;
 }
 
+.topbar .topbar-end .top-nav,
 .topbar .top-nav {
   margin-left: 0 !important;
   flex-shrink: 0;
 }
 
+.topbar .topbar-end .theme-btn,
 .topbar .theme-btn {
   flex-shrink: 0;
-  margin-left: 4px;
+  margin-left: 0 !important;
 }
 
 @media (max-width: 879.98px) {
-  .topbar form.search {
+  .topbar .topbar-end {
+    flex: 1 1 auto !important;
     margin-left: 0 !important;
+  }
+
+  .topbar .topbar-end form.search,
+  .topbar form.search {
     flex: 1 1 auto !important;
     max-width: none !important;
+    min-width: 0 !important;
   }
 }
 
 @media (min-width: 880px) {
+  .topbar .topbar-end .top-nav,
   .topbar .top-nav {
     display: flex !important;
+  }
+}
+
+/* WG re-enables kbd on desktop — keep hidden (causes layout jump) */
+@media (min-width: 768px) and (hover: hover) {
+  .topbar form.search kbd {
+    display: none !important;
   }
 }
 
