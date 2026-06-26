@@ -1,0 +1,108 @@
+{
+  "siteName": "MonkeyMart.one",
+  "brandShort": "MonkeyMart",
+  "brandHtml": "Monkey<span>Mart</span>",
+  "domain": "https://monkeymart.one",
+  "gamesCdn": "https://games.monkeymart.one",
+  "analytics": {
+    "gaMeasurementId": "G-SWBWGBV5PB",
+    "adsenseClient": "ca-pub-4151519079019358"
+  },
+  "title": "MonkeyMart.one — Play Monkey Mart & 500+ Free Browser Games",
+  "description": "Play Monkey Mart free online at MonkeyMart.one. No download — plus 88 classics (Slope, FNAF, Moto X3M) and 500+ HTML5 games in your browser.",
+  "searchPlaceholder": "Search games…",
+  "catalogTitle": "All Free Games — Browse 500+ Titles | MonkeyMart.one",
+  "accent": "#16a34a",
+  "accentDeep": "#15803d",
+  "accentSoft": "#dcfce7",
+  "heroGame": {
+    "name": "Monkey Mart",
+    "by": "MonkeyMart.one",
+    "tag": "PLAY NOW",
+    "meta": "Casual · Simulation · Idle",
+    "copy": "Run your own monkey supermarket! Harvest bananas, stock shelves, serve customers, hire helper monkeys, and expand your store.",
+    "url": "monkey-mart.html",
+    "iframe": "https://monkeymartfree.com/play/monkey-mart/",
+    "c": "#16a34a",
+    "img": "assets/images/site/monkey-mart-logo.png"
+  },
+  "footerTagline": "Play Monkey Mart and hundreds of free browser games — no install, no sign-in.",
+  "staticLocalFeatures": [
+    "personal-bests",
+    "favourites",
+    "recently-played",
+    "for-you",
+    "surprise-me"
+  ],
+  "hideFeatures": [
+    "auth",
+    "business",
+    "weekly-challenge",
+    "streak",
+    "trophies",
+    "recap",
+    "hot-or-not",
+    "share-taste",
+    "shared-with-me",
+    "reviews",
+    "embed-publisher"
+  ],
+  "seo": {
+    "home": {
+      "title": "MonkeyMart.one — Play Monkey Mart & 500+ Free Browser Games",
+      "description": "Play Monkey Mart free online at MonkeyMart.one. No download, no sign-up — plus 88 classics (Slope, FNAF, Moto X3M) and 500+ HTML5 games in your browser.",
+      "ogImage": "assets/images/site/og-home.webp",
+      "h1": "Play Monkey Mart & Free Online Games",
+      "intro": "MonkeyMart.one is your home for Monkey Mart and hundreds of free browser games. Jump into the viral supermarket sim, then explore classics like Slope and Moto X3M — instant play, no install."
+    },
+    "catalog": {
+      "title": "All Free Games — Browse 500+ Titles | MonkeyMart.one",
+      "description": "Browse 500+ free browser games at MonkeyMart.one — casual, puzzle, racing, classics and more. Filter by category and play instantly, no download.",
+      "ogImage": "assets/images/site/og-home.webp"
+    },
+    "monkeyMart": {
+      "title": "Monkey Mart Game — Play Free Online | No Download",
+      "description": "Play Monkey Mart free in your browser. Run your monkey supermarket, harvest bananas, stock shelves and expand your store — no download on MonkeyMart.one.",
+      "ogImage": "assets/images/site/og-monkey-mart.webp",
+      "keywords": "monkey mart, monkey mart game, play monkey mart free, monkey mart online, monkey supermarket game, monkey mart unblocked",
+      "about": [
+        "Monkey Mart is a popular idle supermarket simulation where you play as a hardworking monkey running your own grocery store. Harvest fresh bananas, stock shelves, serve customers and unlock new product aisles as your business grows.",
+        "Play Monkey Mart free on MonkeyMart.one — no download or account required. Works on desktop, tablet and mobile browsers. When you're done stocking bananas, browse 500+ more free games on our site."
+      ],
+      "howToPlay": [
+        "Move your monkey with WASD or arrow keys (tap to move on mobile).",
+        "Walk to the banana patch, harvest fruit, then carry it to the shelf.",
+        "Customers pick up items automatically — keep shelves stocked to earn coins.",
+        "Spend coins on new aisles, helper monkeys and upgrades to expand your mart.",
+        "Unlock new products and zones as you progress through busier levels."
+      ],
+      "faq": [
+        {
+          "q": "Is Monkey Mart free to play?",
+          "a": "Yes. Monkey Mart is 100% free on MonkeyMart.one with no download required."
+        },
+        {
+          "q": "Do I need to create an account?",
+          "a": "No account is needed. Open the page and start playing instantly in your browser."
+        },
+        {
+          "q": "Can I play Monkey Mart on mobile?",
+          "a": "Yes. The game runs in mobile browsers — tap to move and interact with your store."
+        },
+        {
+          "q": "What type of game is Monkey Mart?",
+          "a": "Monkey Mart is a casual idle management sim: harvest, stock shelves, serve customers and expand your supermarket."
+        }
+      ],
+      "specs": {
+        "Technology": "HTML5 / WebGL",
+        "Dimensions": "Responsive — desktop & mobile",
+        "Controls": "Keyboard (WASD) or touch",
+        "Gameplay": "Idle management / simulation",
+        "Language": "English",
+        "Features": "Singleplayer, fullscreen, no download"
+      },
+      "tags": ["Casual", "Simulation", "Idle", "Management"]
+    }
+  }
+}

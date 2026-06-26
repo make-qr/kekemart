@@ -1,0 +1,292 @@
+/**
+ * MonkeyMart.one — theme overrides on WGPlayground shell (static HTML portal)
+ */
+:root {
+  --accent: #16a34a;
+  --accent-deep: #15803d;
+  --accent-soft: #dcfce7;
+  --live: #22c55e;
+}
+
+[data-theme="dark"] {
+  --accent: #22c55e;
+  --accent-deep: #4ade80;
+  --accent-soft: rgba(34, 197, 94, 0.18);
+}
+
+/* Hide WG backend / sign-in / publisher features */
+#authControl,
+#authModal,
+.auth-welcome-toast,
+#businessControl,
+.business-control,
+#fmgFab,
+.surprise-fab,
+.rail-section--business,
+.rail-item--challenge,
+.rail-item--streak,
+.rail-item--trophies,
+.rail-item--recap,
+.rail-item--rivals,
+.rail-item--trending,
+.rail-item--played,
+.rail-item--hotnot,
+.rail-item--mypicks,
+.rail-item--sharetaste,
+.rail-item--shared,
+#embedPlanSelf,
+.embed-card,
+#reviewsSection,
+.player-sec-btn[data-scroll-target="reviewsSection"],
+#writeReviewBtn,
+#bragBtn,
+#challengeHubBtn,
+.foot-col--partners,
+.foot-col--company {
+  display: none !important;
+}
+
+/* Native MonkeyMart classics — same WG shell, trim WG-only widgets */
+html[data-native-game] .live-players,
+html[data-native-game] #weeklyWidget,
+html[data-native-game] #siteStreak,
+html[data-native-game] #inviteBanner,
+html[data-native-game] #verdictBanner {
+  display: none !important;
+}
+
+.rail-section--mm h4 {
+  color: var(--accent-deep);
+}
+
+.rail-section--mm .rail-item--mm-cat .ico {
+  opacity: 0.55;
+}
+
+/* Monkey Mart brand mark */
+.brand-mark img.mm-logo,
+.brand .brand-mark.mm-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark img.mm-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.35);
+}
+
+.brand-text span {
+  color: var(--accent-deep);
+}
+
+/* Featured hero badge */
+.hero .hero-slide:first-child .hero-tag,
+.hero .num {
+  background: linear-gradient(135deg, #16a34a, #f59e0b);
+}
+
+/* Cleaner footer for deploy */
+.foot-bottom {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.foot-grid .mm-foot-tagline {
+  max-width: 38ch;
+  color: var(--ink-soft);
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Monkey Mart play page */
+.mm-play-hero {
+  text-align: center;
+  padding: 12px 0 20px;
+}
+
+.mm-play-hero img {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.25);
+}
+
+.mm-play-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: min(72vh, 760px);
+  height: min(72vh, 760px);
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.mm-play-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: min(72vh, 760px);
+  border: 0;
+  display: block;
+  background: #000;
+}
+
+.mm-play-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 16px 0 24px;
+}
+
+.mm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  background: var(--bg-2);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.mm-btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.mm-btn--primary:hover {
+  background: var(--accent-deep);
+}
+
+@media (max-width: 720px) {
+  .mm-play-frame {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+}
+
+.hero-art::before {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Recommended-next hero: inline background-image (see local-patch.js) */
+.hero-art.mm-has-thumb {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.hero-art.mm-has-thumb::before {
+  background: none !important;
+}
+
+.side-card-art {
+  background-color: color-mix(in srgb, var(--c, #16a34a) 18%, var(--bg-2));
+}
+
+.card .art:not([style*="background-image"]) {
+  background: linear-gradient(145deg, var(--c, #16a34a), color-mix(in srgb, var(--c, #16a34a) 35%, #0f172a));
+}
+
+.card .art[style*="background-image"],
+.side-card-art[style*="background-image"],
+.pub-strip-art[style*="background-image"] {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.mm-home-seo {
+  max-width: 72ch;
+  margin: 28px auto 8px;
+  padding: 28px 16px 0;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+}
+
+.mm-home-seo__title {
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.mm-home-seo__intro {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mm-home-seo__cta {
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mm-home-seo__cta a {
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.mm-home-seo__cta a:hover {
+  text-decoration: underline;
+}
+
+.mm-home-classics {
+  margin-top: 4px;
+}
+
+.mm-home-classics + .section-head {
+  margin-top: 12px;
+}
+
+.mm-classics-grid,
+.main #grid-trending,
+.main #grid-new,
+.main #grid-puzzle {
+  width: 100%;
+}
+
+.main .section-head + .grid,
+.main .section-head + .grid-dense {
+  margin-bottom: 4px;
+}
+
+/* Game page FAQ (SEO) */
+.mm-faq .mm-faq-item {
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background: var(--bg-2);
+}
+
+.mm-faq .mm-faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.mm-faq .mm-faq-item p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.55;
+}

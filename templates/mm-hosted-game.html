@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>{{TITLE}} — Play Free | MonkeyMart.one</title>
+<meta name="description" content="{{DESC}}" />
+<meta property="og:title" content="{{TITLE}} — MonkeyMart.one" />
+<meta property="og:description" content="{{DESC}}" />
+<meta property="og:image" content="{{IMG}}" />
+<meta property="og:site_name" content="MonkeyMart.one" />
+<link rel="stylesheet" href="../assets/css/monkeymart-theme.css" />
+<script>
+(function(){try{var p=localStorage.getItem('theme')||'system';var t=p==='system'?(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'):p;document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<style>
+:root{--mm-top:52px}
+.mm-game-shell{margin:0;min-height:100vh;display:flex;flex-direction:column;background:#0a0a0a;color:#fff}
+.mm-game-top{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(10,10,10,.92);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+.mm-game-top a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;opacity:.9}
+.mm-game-top a:hover{opacity:1;color:#4ade80}
+.mm-game-top h1{font-size:15px;margin:0;flex:1;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mm-game-frame{position:fixed;inset:var(--mm-top) 0 0 0;background:#000}
+.mm-game-frame iframe{display:block;width:100%;height:100%;border:0;background:#000}
+.mm-game-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a3a3a3;font-size:14px}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWBWGBV5PB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SWBWGBV5PB');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4151519079019358"
+     crossorigin="anonymous"></script>
+</head>
+<body class="mm-game-shell" data-page="native-game">
+<header class="mm-game-top">
+  <a href="../index.html">← Home</a>
+  <h1>{{TITLE}}</h1>
+  <a href="../games-catalogue.html?cat=monkeymart-classics">More</a>
+</header>
+<div class="mm-game-frame">
+  <div class="mm-game-loading" id="mmGameLoading">Loading game…</div>
+  <iframe id="nativeGameFrame" title="{{TITLE}}" src="{{IFRAME_SRC}}" allow="fullscreen; autoplay; gamepad; microphone" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<script>
+(function(){
+  var slug='{{SLUG}}';
+  var frame=document.getElementById('nativeGameFrame');
+  var loading=document.getElementById('mmGameLoading');
+  if(frame){frame.addEventListener('load',function(){if(loading)loading.style.display='none';});}
+  try{
+    var key='wg_recent';
+    var raw=localStorage.getItem(key);
+    var list=raw?JSON.parse(raw):[];
+    if(!Array.isArray(list))list=[];
+    var entry={name:'{{TITLE}}',url:location.pathname.split('/').pop(),img:'{{IMG}}',ts:Date.now(),native:true,slug:slug};
+    list=list.filter(function(x){return x&&x.slug!==slug;});
+    list.unshift(entry);
+    localStorage.setItem(key,JSON.stringify(list.slice(0,40)));
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
