@@ -2,7 +2,7 @@ window.MM_NATIVE_CATALOG = {
   "1v1.lol": {
     "name": "1v1.lol",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/1v1.lol/splash.png",
+    "img": "assets/images/mm-native/1v1.lol/splash.png",
     "play": "https://games.monkeymart.one/1v1.lol/index.html",
     "embedMode": "local",
     "cats": [
@@ -17,7 +17,7 @@ window.MM_NATIVE_CATALOG = {
   "2048": {
     "name": "2048",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/2048/thumb.png",
+    "img": "assets/images/mm-native/2048/thumb.png",
     "play": "https://games.monkeymart.one/2048/index.html",
     "embedMode": "local",
     "cats": [
@@ -31,7 +31,7 @@ window.MM_NATIVE_CATALOG = {
   "9007199254740992": {
     "name": "9007199254740992",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/9007199254740992/logo-4.png",
+    "img": "assets/images/mm-native/9007199254740992/logo-4.png",
     "play": "https://games.monkeymart.one/9007199254740992/index.html",
     "embedMode": "local",
     "cats": [
@@ -44,7 +44,7 @@ window.MM_NATIVE_CATALOG = {
   "ages-of-conflict": {
     "name": "Ages Of Conflict",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/ages-of-conflict/splash.jpg",
+    "img": "assets/images/mm-native/ages-of-conflict/splash.jpg",
     "play": "https://games.monkeymart.one/ages-of-conflict/index.html",
     "embedMode": "fallback",
     "cats": [
@@ -57,7 +57,7 @@ window.MM_NATIVE_CATALOG = {
   "among-us": {
     "name": "Among Us",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/among-us/penumbra.png",
+    "img": "assets/images/mm-native/among-us/penumbra.png",
     "play": "https://games.monkeymart.one/among-us/index.html",
     "embedMode": "local",
     "cats": [
@@ -71,7 +71,7 @@ window.MM_NATIVE_CATALOG = {
   "a-small-world-cup": {
     "name": "A Small World Cup",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/a-small-world-cup/icon-256.png",
+    "img": "assets/images/mm-native/a-small-world-cup/icon-256.png",
     "play": "https://games.monkeymart.one/a-small-world-cup/index.html",
     "embedMode": "local",
     "cats": [
@@ -84,7 +84,7 @@ window.MM_NATIVE_CATALOG = {
   "baldis-basics": {
     "name": "Baldi's Basics",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/baldis-basics/baldis-basics.png",
+    "img": "assets/images/mm-native/baldis-basics/baldis-basics.png",
     "play": "https://baldis-basics.pages.dev/",
     "embedMode": "embed",
     "cats": [
@@ -97,7 +97,7 @@ window.MM_NATIVE_CATALOG = {
   "ball-sort-puzzle": {
     "name": "Ball Sort Puzzle",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/ball-sort-puzzle/thumb.png",
+    "img": "assets/images/mm-native/ball-sort-puzzle/thumb.png",
     "play": "https://games.monkeymart.one/ball-sort-puzzle/frame.html",
     "embedMode": "local",
     "cats": [
@@ -110,7 +110,7 @@ window.MM_NATIVE_CATALOG = {
   "basket-and-ball": {
     "name": "Basket and Ball",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/basket-and-ball/thumb.jpg",
+    "img": "assets/images/mm-native/basket-and-ball/thumb.jpg",
     "play": "https://games.monkeymart.one/basket-and-ball/frame.html",
     "embedMode": "local",
     "cats": [
@@ -123,7 +123,7 @@ window.MM_NATIVE_CATALOG = {
   "bitlife": {
     "name": "Bitlife",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/bitlife/thumb.png",
+    "img": "assets/images/mm-native/bitlife/thumb.png",
     "play": "https://bitlifeonline.github.io/class/index.html",
     "embedMode": "embed",
     "cats": [
@@ -136,7 +136,7 @@ window.MM_NATIVE_CATALOG = {
   "blackjack": {
     "name": "Blackjack",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/blackjack/thumb.png",
+    "img": "assets/images/mm-native/blackjack/thumb.png",
     "play": "https://games.monkeymart.one/blackjack/index.html",
     "embedMode": "local",
     "cats": [
@@ -149,7 +149,7 @@ window.MM_NATIVE_CATALOG = {
   "block-the-pig": {
     "name": "Block the Pig",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/block-the-pig/thumb.png",
+    "img": "assets/images/mm-native/block-the-pig/thumb.png",
     "play": "https://games.monkeymart.one/block-the-pig/frame.html",
     "embedMode": "local",
     "cats": [
@@ -162,7 +162,7 @@ window.MM_NATIVE_CATALOG = {
   "cell-machine": {
     "name": "Cell Machine",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/cell-machine/img/icon.png",
+    "img": "assets/images/mm-native/cell-machine/img/icon.png",
     "play": "https://3kh0.github.io/projects/cell-machine/",
     "embedMode": "embed",
     "cats": [
@@ -175,7 +175,7 @@ window.MM_NATIVE_CATALOG = {
   "chrome-dino": {
     "name": "Chrome Dino",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/chrome-dino/icons/icon-16.png",
+    "img": "assets/images/mm-native/chrome-dino/icons/icon-16.png",
     "play": "https://games.monkeymart.one/chrome-dino/index.html",
     "embedMode": "local",
     "cats": [
@@ -188,7 +188,7 @@ window.MM_NATIVE_CATALOG = {
   "circlo": {
     "name": "circlO",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/circlo/img/icon.png",
+    "img": "assets/images/mm-native/circlo/img/icon.png",
     "play": "https://games.monkeymart.one/circlo/index.html",
     "embedMode": "local",
     "cats": [
@@ -201,7 +201,7 @@ window.MM_NATIVE_CATALOG = {
   "cookie-clicker": {
     "name": "Cookie Clicker",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/cookie-clicker/img/perfectCookie.png",
+    "img": "assets/images/mm-native/cookie-clicker/img/perfectCookie.png",
     "play": "https://games.monkeymart.one/cookie-clicker/index.html",
     "embedMode": "local",
     "cats": [
@@ -216,7 +216,7 @@ window.MM_NATIVE_CATALOG = {
   "core-ball": {
     "name": "Core Ball",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/core-ball/pr_source.png",
+    "img": "assets/images/mm-native/core-ball/pr_source.png",
     "play": "https://games.monkeymart.one/core-ball/index.html",
     "embedMode": "local",
     "cats": [
@@ -229,7 +229,7 @@ window.MM_NATIVE_CATALOG = {
   "ctr-time-travel": {
     "name": "Cut The Rope",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/ctr-time-travel/thumb.png",
+    "img": "assets/images/mm-native/ctr-time-travel/thumb.png",
     "play": "https://games.monkeymart.one/ctr-time-travel/index.html",
     "embedMode": "local",
     "cats": [
@@ -242,7 +242,7 @@ window.MM_NATIVE_CATALOG = {
   "death-run-3d": {
     "name": "Death Run 3D",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/death-run-3d/img/death.png",
+    "img": "assets/images/mm-native/death-run-3d/img/death.png",
     "play": "https://3kh0.github.io/projects/death-run-3d/",
     "embedMode": "embed",
     "cats": [
@@ -255,7 +255,7 @@ window.MM_NATIVE_CATALOG = {
   "doodle-jump": {
     "name": "Doodle Jump",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/doodle-jump/doodle.png",
+    "img": "assets/images/mm-native/doodle-jump/doodle.png",
     "play": "https://games.monkeymart.one/doodle-jump/index.html",
     "embedMode": "local",
     "cats": [
@@ -268,7 +268,7 @@ window.MM_NATIVE_CATALOG = {
   "drift-boss": {
     "name": "Drift Boss",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/drift-boss/drift-boss.png",
+    "img": "assets/images/mm-native/drift-boss/drift-boss.png",
     "play": "https://games.monkeymart.one/drift-boss/index.html",
     "embedMode": "local",
     "cats": [
@@ -281,7 +281,7 @@ window.MM_NATIVE_CATALOG = {
   "drift-hunters": {
     "name": "Drift Hunters",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/drift-hunters/thumb.png",
+    "img": "assets/images/mm-native/drift-hunters/thumb.png",
     "play": "https://drift-hunters.io/play",
     "embedMode": "embed",
     "cats": [
@@ -294,7 +294,7 @@ window.MM_NATIVE_CATALOG = {
   "ducklife4": {
     "name": "Duck Life 4",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/ducklife4/splash.jpg",
+    "img": "assets/images/mm-native/ducklife4/splash.jpg",
     "play": "https://ubggo.github.io/ub-games/ducklife4/",
     "embedMode": "embed",
     "cats": [
@@ -307,7 +307,7 @@ window.MM_NATIVE_CATALOG = {
   "eaglercraft": {
     "name": "EaglerCraft",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/eaglercraft/icon.jpeg",
+    "img": "assets/images/mm-native/eaglercraft/icon.jpeg",
     "play": "https://games.monkeymart.one/eaglercraft/index.html",
     "embedMode": "local",
     "cats": [
@@ -320,7 +320,7 @@ window.MM_NATIVE_CATALOG = {
   "edge-surf": {
     "name": "Edge Surf",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/edge-surf/icons/icon-256.png",
+    "img": "assets/images/mm-native/edge-surf/icons/icon-256.png",
     "play": "https://games.monkeymart.one/edge-surf/index.html",
     "embedMode": "local",
     "cats": [
@@ -333,7 +333,7 @@ window.MM_NATIVE_CATALOG = {
   "flappy-bird": {
     "name": "Flappy Bird",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/flappy-bird/assets/thumb.png",
+    "img": "assets/images/mm-native/flappy-bird/assets/thumb.png",
     "play": "https://games.monkeymart.one/flappy-bird/index.html",
     "embedMode": "local",
     "cats": [
@@ -347,7 +347,7 @@ window.MM_NATIVE_CATALOG = {
   "fruit-ninja": {
     "name": "Fruit Ninja",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fruit-ninja/thumb.png",
+    "img": "assets/images/mm-native/fruit-ninja/thumb.png",
     "play": "https://games.monkeymart.one/fruit-ninja/index.html",
     "embedMode": "fallback",
     "cats": [
@@ -360,7 +360,7 @@ window.MM_NATIVE_CATALOG = {
   "geodash": {
     "name": "Geometry Dash",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/geodash/geoscratchicon.png",
+    "img": "assets/images/mm-native/geodash/geoscratchicon.png",
     "play": "https://games.monkeymart.one/geodash/index.html",
     "embedMode": "local",
     "cats": [
@@ -373,7 +373,7 @@ window.MM_NATIVE_CATALOG = {
   "geodash-subzero": {
     "name": "Geometry Dash",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/geodash-subzero/geodash-subzero.png",
+    "img": "assets/images/mm-native/geodash-subzero/geodash-subzero.png",
     "play": "https://games.monkeymart.one/geodash-subzero/index.html",
     "embedMode": "local",
     "cats": [
@@ -386,7 +386,7 @@ window.MM_NATIVE_CATALOG = {
   "google-feud": {
     "name": "Google Feud",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/google-feud/splash.png",
+    "img": "assets/images/mm-native/google-feud/splash.png",
     "play": "https://games.monkeymart.one/google-feud/index.html",
     "embedMode": "local",
     "cats": [
@@ -399,7 +399,7 @@ window.MM_NATIVE_CATALOG = {
   "google-snake": {
     "name": "Google Snake",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/google-snake/google-snake.png",
+    "img": "assets/images/mm-native/google-snake/google-snake.png",
     "play": "https://games.monkeymart.one/google-snake/index.html",
     "embedMode": "local",
     "cats": [
@@ -412,7 +412,7 @@ window.MM_NATIVE_CATALOG = {
   "hextris": {
     "name": "Hextris",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/hextris/images/hextris-logo.png",
+    "img": "assets/images/mm-native/hextris/images/hextris-logo.png",
     "play": "https://games.monkeymart.one/hextris/index.html",
     "embedMode": "local",
     "cats": [
@@ -425,7 +425,7 @@ window.MM_NATIVE_CATALOG = {
   "little-alchemy": {
     "name": "Little Alchemy 2",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/little-alchemy/unnamed.png",
+    "img": "assets/images/mm-native/little-alchemy/unnamed.png",
     "play": "https://games.monkeymart.one/little-alchemy/frame.html",
     "embedMode": "local",
     "cats": [
@@ -438,7 +438,7 @@ window.MM_NATIVE_CATALOG = {
   "madalin-stunt-cars-2": {
     "name": "Madalin Stunt Cars 2",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/madalin-stunt-cars-2/img/logo.jpg",
+    "img": "assets/images/mm-native/madalin-stunt-cars-2/img/logo.jpg",
     "play": "https://games.monkeymart.one/madalin-stunt-cars-2/index.html",
     "embedMode": "local",
     "cats": [
@@ -451,7 +451,7 @@ window.MM_NATIVE_CATALOG = {
   "madalin-stunt-cars-3": {
     "name": "Madalin Stunt Cars 3",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/madalin-stunt-cars-3/img/index.jpg",
+    "img": "assets/images/mm-native/madalin-stunt-cars-3/img/index.jpg",
     "play": "https://games.monkeymart.one/madalin-stunt-cars-3/index.html",
     "embedMode": "local",
     "cats": [
@@ -464,7 +464,7 @@ window.MM_NATIVE_CATALOG = {
   "mario": {
     "name": "Mario",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/mario/Theme/Mario.jpg",
+    "img": "assets/images/mm-native/mario/Theme/Mario.jpg",
     "play": "https://games.monkeymart.one/mario/index.html",
     "embedMode": "local",
     "cats": [
@@ -479,7 +479,7 @@ window.MM_NATIVE_CATALOG = {
   "minecraft": {
     "name": "Minecraft Classic",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/minecraft/thumb.png",
+    "img": "assets/images/mm-native/minecraft/thumb.png",
     "play": "https://games.monkeymart.one/minecraft/index.html",
     "embedMode": "local",
     "cats": [
@@ -493,7 +493,7 @@ window.MM_NATIVE_CATALOG = {
   "minesweeper": {
     "name": "Minesweeper",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/minesweeper/img/minesweeper.png",
+    "img": "assets/images/mm-native/minesweeper/img/minesweeper.png",
     "play": "https://games.monkeymart.one/minesweeper/index.html",
     "embedMode": "local",
     "cats": [
@@ -507,7 +507,7 @@ window.MM_NATIVE_CATALOG = {
   "pacman": {
     "name": "Pac-Man",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/pacman/thumbnail.png",
+    "img": "assets/images/mm-native/pacman/thumbnail.png",
     "play": "https://games.monkeymart.one/pacman/index.html",
     "embedMode": "local",
     "cats": [
@@ -522,7 +522,7 @@ window.MM_NATIVE_CATALOG = {
   "paperio2": {
     "name": "Paper.io 2",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/paperio2/images/icon512.png",
+    "img": "assets/images/mm-native/paperio2/images/icon512.png",
     "play": "https://games.monkeymart.one/paperio2/index.html",
     "embedMode": "local",
     "cats": [
@@ -535,7 +535,7 @@ window.MM_NATIVE_CATALOG = {
   "papery-planes": {
     "name": "Papery Planes",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/papery-planes/thumb.png",
+    "img": "assets/images/mm-native/papery-planes/thumb.png",
     "play": "https://games.monkeymart.one/papery-planes/index.html",
     "embedMode": "local",
     "cats": [
@@ -548,7 +548,7 @@ window.MM_NATIVE_CATALOG = {
   "project-sand": {
     "name": "Project Sand",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/project-sand/assets/thumb.png",
+    "img": "assets/images/mm-native/project-sand/assets/thumb.png",
     "play": "https://games.monkeymart.one/project-sand/index.html",
     "embedMode": "local",
     "cats": [
@@ -561,7 +561,7 @@ window.MM_NATIVE_CATALOG = {
   "retro-bowl": {
     "name": "Retro Bowl",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/retro-bowl/img/splash.png",
+    "img": "assets/images/mm-native/retro-bowl/img/splash.png",
     "play": "https://games.monkeymart.one/retro-bowl/index.html",
     "embedMode": "local",
     "cats": [
@@ -576,7 +576,7 @@ window.MM_NATIVE_CATALOG = {
   "retro-bowl-college": {
     "name": "Retro Bowl College",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/retro-bowl-college/unnamed.png",
+    "img": "assets/images/mm-native/retro-bowl-college/unnamed.png",
     "play": "https://games.monkeymart.one/retro-bowl-college/index.html",
     "embedMode": "local",
     "cats": [
@@ -591,7 +591,7 @@ window.MM_NATIVE_CATALOG = {
   "rocketpult": {
     "name": "Rocketpult",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/rocketpult/icons/loading-logo.png",
+    "img": "assets/images/mm-native/rocketpult/icons/loading-logo.png",
     "play": "https://games.monkeymart.one/rocketpult/index.html",
     "embedMode": "local",
     "cats": [
@@ -604,7 +604,7 @@ window.MM_NATIVE_CATALOG = {
   "rooftop-snipers": {
     "name": "Rooftop Snipers",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/rooftop-snipers/thumb.png",
+    "img": "assets/images/mm-native/rooftop-snipers/thumb.png",
     "play": "https://games.monkeymart.one/rooftop-snipers/frame.html",
     "embedMode": "local",
     "cats": [
@@ -617,7 +617,7 @@ window.MM_NATIVE_CATALOG = {
   "sandtrix": {
     "name": "Sand Tetris",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/sandtrix/thumb.png",
+    "img": "assets/images/mm-native/sandtrix/thumb.png",
     "play": "https://games.monkeymart.one/sandtrix/index.html",
     "embedMode": "local",
     "cats": [
@@ -630,7 +630,7 @@ window.MM_NATIVE_CATALOG = {
   "save-the-doge": {
     "name": "Save the Doge",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/save-the-doge/thumb.png",
+    "img": "assets/images/mm-native/save-the-doge/thumb.png",
     "play": "https://games.monkeymart.one/save-the-doge/frame.html",
     "embedMode": "local",
     "cats": [
@@ -643,7 +643,7 @@ window.MM_NATIVE_CATALOG = {
   "slope": {
     "name": "Slope",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/slope/slope4.jpeg",
+    "img": "assets/images/mm-native/slope/slope4.jpeg",
     "play": "https://ubggo.github.io/ub-games/slope/",
     "embedMode": "embed",
     "cats": [
@@ -658,7 +658,7 @@ window.MM_NATIVE_CATALOG = {
   "smash-karts": {
     "name": "Smash Karts",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/smash-karts/smash-karts.png",
+    "img": "assets/images/mm-native/smash-karts/smash-karts.png",
     "play": "https://smashkarts.io/",
     "embedMode": "embed",
     "cats": [
@@ -671,7 +671,7 @@ window.MM_NATIVE_CATALOG = {
   "solitaire": {
     "name": "Solitare",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/solitaire/screen-shot-win.png",
+    "img": "assets/images/mm-native/solitaire/screen-shot-win.png",
     "play": "https://games.monkeymart.one/solitaire/index.html",
     "embedMode": "local",
     "cats": [
@@ -685,7 +685,7 @@ window.MM_NATIVE_CATALOG = {
   "ms-solitaire": {
     "name": "Solitare (MS)",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/ms-solitaire/unnamed.png",
+    "img": "assets/images/mm-native/ms-solitaire/unnamed.png",
     "play": "https://games.monkeymart.one/ms-solitaire/index.html",
     "embedMode": "local",
     "cats": [
@@ -699,7 +699,7 @@ window.MM_NATIVE_CATALOG = {
   "stack": {
     "name": "Stack",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/stack/icon.png",
+    "img": "assets/images/mm-native/stack/icon.png",
     "play": "https://games.monkeymart.one/stack/index.html",
     "embedMode": "local",
     "cats": [
@@ -712,7 +712,7 @@ window.MM_NATIVE_CATALOG = {
   "stickman-hook": {
     "name": "Stickman Hook",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/stickman-hook/unnamed.jpg",
+    "img": "assets/images/mm-native/stickman-hook/unnamed.jpg",
     "play": "https://games.monkeymart.one/stickman-hook/frame.html",
     "embedMode": "local",
     "cats": [
@@ -725,7 +725,7 @@ window.MM_NATIVE_CATALOG = {
   "temple-run-2": {
     "name": "Temple Run 2",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/temple-run-2/6bbd8797ffdaf4e4c44b49e4732c9bf1.webp",
+    "img": "assets/images/mm-native/temple-run-2/6bbd8797ffdaf4e4c44b49e4732c9bf1.webp",
     "play": "https://games.monkeymart.one/temple-run-2/index.html",
     "embedMode": "local",
     "cats": [
@@ -738,7 +738,7 @@ window.MM_NATIVE_CATALOG = {
   "totm": {
     "name": "Tomb of the Mask",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/totm/thumb.png",
+    "img": "assets/images/mm-native/totm/thumb.png",
     "play": "https://games.monkeymart.one/totm/index.html",
     "embedMode": "local",
     "cats": [
@@ -764,7 +764,7 @@ window.MM_NATIVE_CATALOG = {
   "waterworks": {
     "name": "Waterworks!",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/waterworks/thumb.png",
+    "img": "assets/images/mm-native/waterworks/thumb.png",
     "play": "https://games.monkeymart.one/waterworks/index.html",
     "embedMode": "local",
     "cats": [
@@ -777,7 +777,7 @@ window.MM_NATIVE_CATALOG = {
   "wbwwb": {
     "name": "We Become what we Behold",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/wbwwb/thumb.png",
+    "img": "assets/images/mm-native/wbwwb/thumb.png",
     "play": "https://games.monkeymart.one/wbwwb/index.html",
     "embedMode": "local",
     "cats": [
@@ -790,7 +790,7 @@ window.MM_NATIVE_CATALOG = {
   "fireboy-and-watergirl-1": {
     "name": "1 - Forest",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fireboy-and-watergirl-1/thumb.jpeg",
+    "img": "assets/images/mm-native/fireboy-and-watergirl-1/thumb.jpeg",
     "play": "https://games.monkeymart.one/fireboy-and-watergirl-1/index.html",
     "embedMode": "local",
     "cats": [
@@ -805,7 +805,7 @@ window.MM_NATIVE_CATALOG = {
   "fireboy-and-watergirl-2": {
     "name": "2 - Light",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fireboy-and-watergirl-2/thumb.jpeg",
+    "img": "assets/images/mm-native/fireboy-and-watergirl-2/thumb.jpeg",
     "play": "https://games.monkeymart.one/fireboy-and-watergirl-2/index.html",
     "embedMode": "local",
     "cats": [
@@ -820,7 +820,7 @@ window.MM_NATIVE_CATALOG = {
   "fireboy-and-watergirl-3": {
     "name": "3 - Ice",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fireboy-and-watergirl-3/thumb.jpeg",
+    "img": "assets/images/mm-native/fireboy-and-watergirl-3/thumb.jpeg",
     "play": "https://games.monkeymart.one/fireboy-and-watergirl-3/index.html",
     "embedMode": "local",
     "cats": [
@@ -835,7 +835,7 @@ window.MM_NATIVE_CATALOG = {
   "fireboy-and-watergirl-4": {
     "name": "4 - Crystal",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fireboy-and-watergirl-4/thumb.jpeg",
+    "img": "assets/images/mm-native/fireboy-and-watergirl-4/thumb.jpeg",
     "play": "https://games.monkeymart.one/fireboy-and-watergirl-4/index.html",
     "embedMode": "local",
     "cats": [
@@ -850,7 +850,7 @@ window.MM_NATIVE_CATALOG = {
   "fireboy-and-watergirl-5": {
     "name": "5 - Elements",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fireboy-and-watergirl-5/thumb.png",
+    "img": "assets/images/mm-native/fireboy-and-watergirl-5/thumb.png",
     "play": "https://games.monkeymart.one/fireboy-and-watergirl-5/index.html",
     "embedMode": "local",
     "cats": [
@@ -865,7 +865,7 @@ window.MM_NATIVE_CATALOG = {
   "fireboy-and-watergirl-6": {
     "name": "6 - Fairy Tales",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fireboy-and-watergirl-6/thumb.jpg",
+    "img": "assets/images/mm-native/fireboy-and-watergirl-6/thumb.jpg",
     "play": "https://games.monkeymart.one/fireboy-and-watergirl-6/index.html",
     "embedMode": "local",
     "cats": [
@@ -880,7 +880,7 @@ window.MM_NATIVE_CATALOG = {
   "fnaf-1": {
     "name": "FNAF 1",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fnaf-1/favicon.png",
+    "img": "assets/images/mm-native/fnaf-1/favicon.png",
     "play": "https://games.monkeymart.one/fnaf-1/index.html",
     "embedMode": "local",
     "cats": [
@@ -895,7 +895,7 @@ window.MM_NATIVE_CATALOG = {
   "fnaf-2": {
     "name": "FNAF 2",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fnaf-2/fnaf-2.jpg",
+    "img": "assets/images/mm-native/fnaf-2/fnaf-2.jpg",
     "play": "https://games.monkeymart.one/fnaf-2/index.html",
     "embedMode": "local",
     "cats": [
@@ -910,7 +910,7 @@ window.MM_NATIVE_CATALOG = {
   "fnaf-3": {
     "name": "FNAF 3",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fnaf-3/fnaf-3.png",
+    "img": "assets/images/mm-native/fnaf-3/fnaf-3.png",
     "play": "https://games.monkeymart.one/fnaf-3/index.html",
     "embedMode": "local",
     "cats": [
@@ -925,7 +925,7 @@ window.MM_NATIVE_CATALOG = {
   "fnaf-4": {
     "name": "FNAF 4",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fnaf-4/thumb.png",
+    "img": "assets/images/mm-native/fnaf-4/thumb.png",
     "play": "https://games.monkeymart.one/fnaf-4/frame.html",
     "embedMode": "local",
     "cats": [
@@ -940,7 +940,7 @@ window.MM_NATIVE_CATALOG = {
   "fnaf-5": {
     "name": "Sister Location",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fnaf-5/favicon.jpg",
+    "img": "assets/images/mm-native/fnaf-5/favicon.jpg",
     "play": "https://games.monkeymart.one/fnaf-5/index.html",
     "embedMode": "local",
     "cats": [
@@ -955,7 +955,7 @@ window.MM_NATIVE_CATALOG = {
   "fnaf-ucn": {
     "name": "FNAF UCN",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/fnaf-ucn/thumb.png",
+    "img": "assets/images/mm-native/fnaf-ucn/thumb.png",
     "play": "https://games.monkeymart.one/fnaf-ucn/index.html",
     "embedMode": "local",
     "cats": [
@@ -970,7 +970,7 @@ window.MM_NATIVE_CATALOG = {
   "moto-x3m": {
     "name": "Moto X3M",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/moto-x3m/moto-x3m.png",
+    "img": "assets/images/mm-native/moto-x3m/moto-x3m.png",
     "play": "https://games.monkeymart.one/moto-x3m/index.html",
     "embedMode": "local",
     "cats": [
@@ -985,7 +985,7 @@ window.MM_NATIVE_CATALOG = {
   "moto-x3m-2": {
     "name": "Moto X3M 2",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/moto-x3m-2/moto-x3m-2.png",
+    "img": "assets/images/mm-native/moto-x3m-2/moto-x3m-2.png",
     "play": "https://games.monkeymart.one/moto-x3m-2/index.html",
     "embedMode": "local",
     "cats": [
@@ -1000,7 +1000,7 @@ window.MM_NATIVE_CATALOG = {
   "moto-x3m-winter": {
     "name": "Moto X3M Winter",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/moto-x3m-winter/moto-x3m-winter.jpg",
+    "img": "assets/images/mm-native/moto-x3m-winter/moto-x3m-winter.jpg",
     "play": "https://games.monkeymart.one/moto-x3m-winter/index.html",
     "embedMode": "local",
     "cats": [
@@ -1015,7 +1015,7 @@ window.MM_NATIVE_CATALOG = {
   "moto-x3m-pool-party": {
     "name": "Moto X3M Pool Party",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/moto-x3m-pool-party/moto-x3m-pool-party.png",
+    "img": "assets/images/mm-native/moto-x3m-pool-party/moto-x3m-pool-party.png",
     "play": "https://games.monkeymart.one/moto-x3m-pool-party/index.html",
     "embedMode": "local",
     "cats": [
@@ -1030,7 +1030,7 @@ window.MM_NATIVE_CATALOG = {
   "moto-x3m-spooky-land": {
     "name": "Moto X3M Spooky Land",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/moto-x3m-spooky-land/moto-x3m-spooky-land.png",
+    "img": "assets/images/mm-native/moto-x3m-spooky-land/moto-x3m-spooky-land.png",
     "play": "https://games.monkeymart.one/moto-x3m-spooky-land/index.html",
     "embedMode": "local",
     "cats": [
@@ -1045,7 +1045,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob": {
     "name": "Snail Bob",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob/snail-bob.png",
+    "img": "assets/images/mm-native/snail-bob/snail-bob.png",
     "play": "https://games.monkeymart.one/snail-bob/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1060,7 +1060,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob-2": {
     "name": "Snail Bob 2",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob-2/snail-bob-2.png",
+    "img": "assets/images/mm-native/snail-bob-2/snail-bob-2.png",
     "play": "https://games.monkeymart.one/snail-bob-2/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1075,7 +1075,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob-3": {
     "name": "Snail Bob 3",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob-3/snail-bob-3.png",
+    "img": "assets/images/mm-native/snail-bob-3/snail-bob-3.png",
     "play": "https://games.monkeymart.one/snail-bob-3/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1090,7 +1090,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob-4": {
     "name": "Snail Bob 4",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob-4/snail-bob-4.png",
+    "img": "assets/images/mm-native/snail-bob-4/snail-bob-4.png",
     "play": "https://games.monkeymart.one/snail-bob-4/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1105,7 +1105,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob-5": {
     "name": "Snail Bob 5",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob-5/snail-bob-5.jpg",
+    "img": "assets/images/mm-native/snail-bob-5/snail-bob-5.jpg",
     "play": "https://games.monkeymart.one/snail-bob-5/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1120,7 +1120,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob-6": {
     "name": "Snail Bob 6",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob-6/snail-bob-6.png",
+    "img": "assets/images/mm-native/snail-bob-6/snail-bob-6.png",
     "play": "https://games.monkeymart.one/snail-bob-6/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1135,7 +1135,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob-7": {
     "name": "Snail Bob 7",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob-7/9aefc9ef4a7f4d5d8062cfb563cc658c-512x512.jpeg",
+    "img": "assets/images/mm-native/snail-bob-7/9aefc9ef4a7f4d5d8062cfb563cc658c-512x512.jpeg",
     "play": "https://games.monkeymart.one/snail-bob-7/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1150,7 +1150,7 @@ window.MM_NATIVE_CATALOG = {
   "snail-bob-8": {
     "name": "Snail Bob 8",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/snail-bob-8/snail-bob-8.jpg",
+    "img": "assets/images/mm-native/snail-bob-8/snail-bob-8.jpg",
     "play": "https://games.monkeymart.one/snail-bob-8/frame.html",
     "embedMode": "local",
     "cats": [
@@ -1165,7 +1165,7 @@ window.MM_NATIVE_CATALOG = {
   "vex3": {
     "name": "Vex 3",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/vex3/vex3.png",
+    "img": "assets/images/mm-native/vex3/vex3.png",
     "play": "https://games.monkeymart.one/vex3/index.html",
     "embedMode": "local",
     "cats": [
@@ -1180,7 +1180,7 @@ window.MM_NATIVE_CATALOG = {
   "vex4": {
     "name": "Vex 4",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/vex4/vex4.png",
+    "img": "assets/images/mm-native/vex4/vex4.png",
     "play": "https://games.monkeymart.one/vex4/index.html",
     "embedMode": "local",
     "cats": [
@@ -1195,7 +1195,7 @@ window.MM_NATIVE_CATALOG = {
   "vex5": {
     "name": "Vex 5",
     "by": "MonkeyMart.one",
-    "img": "https://games.monkeymart.one/vex5/vex.jpg",
+    "img": "assets/images/mm-native/vex5/vex.jpg",
     "play": "https://games.monkeymart.one/vex5/index.html",
     "embedMode": "local",
     "cats": [
