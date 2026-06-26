@@ -54,11 +54,29 @@
     return url;
   }
 
+  function gamesCdnToBundledThumb(url) {
+    if (window.MM_gamesCdnToBundledThumb) return window.MM_gamesCdnToBundledThumb(url);
+    if (!url) return url;
+    var base = ((window.MM_BRAND && window.MM_BRAND.gamesCdn) || 'https://games.monkeymart.one').replace(
+      /\/$/,
+      ''
+    );
+    if (url.indexOf(base + '/') === 0) {
+      return withPagePrefix('assets/images/mm-native/' + url.slice(base.length + 1));
+    }
+    if (url.indexOf('hosted-games/') >= 0) {
+      return withPagePrefix(url.replace(/hosted-games\//g, 'assets/images/mm-native/'));
+    }
+    return url;
+  }
+
   function gamesCdnToLocal(url) {
     if (window.MM_gamesCdnToLocal) return window.MM_gamesCdnToLocal(url);
     if (!url) return url;
     var h = location.hostname;
-    if (h !== 'localhost' && h !== '127.0.0.1' && h !== '0.0.0.0') return url;
+    if (h !== 'localhost' && h !== '127.0.0.1' && h !== '0.0.0.0') {
+      return gamesCdnToBundledThumb(url);
+    }
     var base = ((window.MM_BRAND && window.MM_BRAND.gamesCdn) || 'https://games.monkeymart.one').replace(
       /\/$/,
       ''
@@ -66,7 +84,7 @@
     if (url.indexOf(base + '/') === 0) {
       return withPagePrefix('hosted-games/' + url.slice(base.length + 1));
     }
-    return url;
+    return gamesCdnToBundledThumb(url);
   }
 
   function styleArtThumb(el) {
@@ -79,6 +97,7 @@
   function localImg(url) {
     if (!url) return url;
     url = fixOgExtension(url);
+    url = gamesCdnToBundledThumb(url);
     url = gamesCdnToLocal(url);
     if (url.indexOf('assets/images/') === 0 || url.indexOf('../assets/images/') === 0) {
       return withPagePrefix(url.replace(/^\.\.\//, ''));
