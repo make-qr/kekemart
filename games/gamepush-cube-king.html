@@ -4,21 +4,21 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>CUBE KING — WGPlayground</title>
+<title>CUBE KING — MonkeyMart.one</title>
 <meta name="description" content="Show them who's the real King here!  New cubes appear from the portals at the bottom. Your task is to connect cubes with the same numbers by moving them from one stack to another!  You get coins for every merge. Use them wisely: Upgrade a selected cube! Unlock new portals with cubes! Increase the st">
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" id="ogTitle" content="CUBE KING - Play free on WGPlayground" />
+<meta property="og:title" id="ogTitle" content="CUBE KING - Play free on MonkeyMart.one" />
 <meta property="og:description" id="ogDesc" content="Show them who's the real King here!  New cubes appear from the portals at the bottom. Your task is to connect cubes with the same numbers by moving them from one stack to another!  You get coins for every merge. Use them wisely: Upgrade a selected cube! Unlock new portals with cubes! Increase the st" />
 <meta property="og:image" id="ogImage" content="../assets/images/games/gamepush-cube-king/og.webp" />
-<meta property="og:url" content="https://www.wgplayground.com/game/gamepush/cube-king" />
-<meta property="og:site_name" content="WGPlayground" />
+<meta property="og:url" content="https://monkeymart.one/games/gamepush-cube-king.html" />
+<meta property="og:site_name" content="MonkeyMart.one" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" id="twTitle" content="CUBE KING - Play free on WGPlayground" />
+<meta name="twitter:title" id="twTitle" content="CUBE KING - Play free on MonkeyMart.one" />
 <meta name="twitter:description" id="twDesc" content="Show them who's the real King here!  New cubes appear from the portals at the bottom. Your task is to connect cubes with the same numbers by moving them from one stack to another!  You get coins for every merge. Use them wisely: Upgrade a selected cube! Unlock new portals with cubes! Increase the st" />
 <meta name="twitter:image" id="twImage" content="../assets/images/games/gamepush-cube-king/og.webp" />
-<meta name="twitter:site" content="@wgplayground" />
+<meta name="twitter:site" content="@monkeymartone" />
 
 
 
@@ -248,7 +248,7 @@
       var v = VERDICT_MAP[slugLc] || ARCH_MAP[slugLc];
       if (!v) return;
       var article = /^[aeiou]/i.test(v.title) ? 'an' : 'a';
-      var title = "I'm " + article + " " + v.title + " on WGPlayground - what about you?";
+      var title = "I'm " + article + " " + v.title + " on MonkeyMart - what about you?";
       var desc  = v.emoji + ' ' + v.sub + '. Take the Hot or Not test and find your gaming personality.';
       function setMeta(id, content) {
         var el = document.getElementById(id);
@@ -406,30 +406,14 @@
 <link rel="stylesheet" href="../assets/vendor/wgp/public/v6/css/install.min.css" />
 <link rel="stylesheet" href="../assets/css/local.css" />
 <link rel="stylesheet" href="../assets/css/monkeymart-theme.css" />
-<link rel="manifest" href="https://www.wgplayground.com/manifest/gamepush/cube-king" />
 <meta name="theme-color" content="#0f1118" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="CUBE KING" />
-<script>
-
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('https://www.wgplayground.com/sw-game', {
-        scope: 'https://www.wgplayground.com/game/gamepush/cube-king/'
-      }).catch(function(err) {
-        console.warn('[wgp-pwa] sw register failed', err);
-      });
-    });
-  }
-
-</script>
-
-
 <link rel="icon" type="image/x-icon" href="../assets/images/site/favicon.ico">
-
+<link rel="apple-touch-icon" href="../assets/images/site/apple-touch-icon.png" />
 <script>
-    var BASE_URL = 'https://www.wgplayground.com/';
+    var BASE_URL = '/';
         window.WG_GOOGLE_CLIENT_ID    = '781902506267-3iou2cqtkq5q3lf5lm15vmrks6imlnh1.apps.googleusercontent.com';
     window.WG_MICROSOFT_CLIENT_ID = '';
     window.WG_APPLE_SERVICE_ID    = '';
@@ -484,7 +468,7 @@
 
   <div class="top-spacer"></div>
 
-  <form class="search" action="https://www.wgplayground.com/search" method="get" role="search" aria-label="Search games">
+  <form class="search" action="games-catalogue.html" method="get" role="search" aria-label="Search games">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
       <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
     </svg>
@@ -547,7 +531,7 @@
       </a>
       <div class="business-menu-divider" role="separator"></div>
       <a class="business-menu-cta" href="https://www.wgplayground.com/developers" role="menuitem">
-        <span class="business-menu-cta-text">Not on WGPlayground yet?</span>
+        <span class="business-menu-cta-text">Not on MonkeyMart yet?</span>
         <strong>Apply to join the network <span aria-hidden="true">→</span></strong>
       </a>
     </div>
@@ -674,7 +658,7 @@
         <div id="railCatMore"></div>
 
         
-        <a class="rail-catalogue" href="https://www.wgplayground.com/games-catalogue">
+        <a class="rail-catalogue" href="games-catalogue.html">
           <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
           <span class="label">Full catalogue</span>
           <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 6 6 6-6 6"/></svg>
@@ -701,7 +685,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg>
         <a href="../games-catalogue.html">Games</a>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg>
-          <a href="https://www.wgplayground.com/games-catalogue/games/casual">Casual</a>
+          <a href="games-catalogue.html/games/casual">Casual</a>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg>
         <span aria-current="page">CUBE KING</span>
       </nav>
@@ -827,7 +811,7 @@
             <span class="live-players-count" id="livePlayersCount">247</span>
             <span class="live-players-label">playing right now</span>
           </span>
-                    <span class="site-streak" id="siteStreak" hidden title="Days in a row you've visited WGPlayground (this device)" aria-label="Your current play streak">
+                    <span class="site-streak" id="siteStreak" hidden title="Days in a row you've visited MonkeyMart (this device)" aria-label="Your current play streak">
             <span class="site-streak-flame" aria-hidden="true">🔥</span>
             <span class="site-streak-count" id="siteStreakCount">0</span>
             <span class="site-streak-label">day site streak</span>
@@ -957,12 +941,12 @@
         <section class="info-strip" aria-label="Game info">
       <div class="info-strip-left">
         <div class="tag-chips">
-                      <a class="tag-chip tag-chip--genre" href="https://www.wgplayground.com/games-catalogue/games/casual">Casual</a>
-                      <a class="tag-chip tag-chip--genre" href="https://www.wgplayground.com/games-catalogue/games/puzzles">Puzzles</a>
-                                              <a class="tag-chip" href="https://www.wgplayground.com/games-catalogue/tags/3d">3D</a>
-                                                <a class="tag-chip" href="https://www.wgplayground.com/games-catalogue/tags/arcade-fun">arcade fun</a>
-                                                <a class="tag-chip" href="https://www.wgplayground.com/games-catalogue/tags/boys">boys</a>
-                                                <a class="tag-chip" href="https://www.wgplayground.com/games-catalogue/tags/action-game-mobile">action game mobile</a>
+                      <a class="tag-chip tag-chip--genre" href="games-catalogue.html/games/casual">Casual</a>
+                      <a class="tag-chip tag-chip--genre" href="games-catalogue.html/games/puzzles">Puzzles</a>
+                                              <a class="tag-chip" href="games-catalogue.html/tags/3d">3D</a>
+                                                <a class="tag-chip" href="games-catalogue.html/tags/arcade-fun">arcade fun</a>
+                                                <a class="tag-chip" href="games-catalogue.html/tags/boys">boys</a>
+                                                <a class="tag-chip" href="games-catalogue.html/tags/action-game-mobile">action game mobile</a>
                                                                                                                                                                   </div>
 
         <span class="info-sep"></span>
@@ -1217,7 +1201,7 @@ Progress through levels and discover more objects.</p>
               <ul class="embed-plan-perks">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Embed all 2,800+ games instantly</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>No signup, no contracts</span></li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Standard WGPlayground branding</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Standard MonkeyMart branding</span></li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>No revenue share - use it freely</span></li>
               </ul>
               <button type="button" class="embed-plan-cta embed-plan-cta--self" id="embedPlanSelfBtn">
@@ -1366,7 +1350,7 @@ Progress through levels and discover more objects.</p>
 
             <div class="section-head">
       <h2><span class="dot" style="background:#8b5cf6"></span>More from GAMEPUSH</h2>
-      <a class="more" href="https://www.wgplayground.com/games-catalogue/games-by/gamepush">See all 550 &rarr;</a>    </div>
+      <a class="more" href="games-catalogue.html/games-by/gamepush">See all 550 &rarr;</a>    </div>
     <div class="grid grid-dense">
                                                                       <a class="card" href="https://www.wgplayground.com/game/gamepush/hexa-arrows-puzzle" aria-label="Hexa Arrows Puzzle" data-fav="%7B%22name%22%3A%22Hexa%20Arrows%20Puzzle%22%2C%22by%22%3A%22GAMEPUSH%22%2C%22img%22%3A%22https%3A%2F%2Fscout.wgimager.com%2Ff_avif%2Fw_400%2Fh_250%2Fq_50%2Fhttps%3A%2F%2Fstatic.wgplayground.com%2F56d358e53db53ed28c988dab140d2933%2Fwgplayground%2Fafad564ea9f93ed7112cae6e3d1aedc0.jpg%22%2C%22url%22%3A%22https%3A%2F%2Fwww.wgplayground.com%2Fgame%2Fgamepush%2Fhexa-arrows-puzzle%22%2C%22c%22%3A%22%238b5cf6%22%2C%22pip%22%3A%22%22%2C%22preview%22%3A%22https%3A%2F%2Fstatic.wgplayground.com%2F56d358e53db53ed28c988dab140d2933%2Fwgplayground%2Fa2ab483d08edfdd217287b2ea759c066.m3u8%22%7D" data-preview="https%3A%2F%2Fstatic.wgplayground.com%2F56d358e53db53ed28c988dab140d2933%2Fwgplayground%2Fa2ab483d08edfdd217287b2ea759c066.m3u8" style="--c:#8b5cf6">
           <div class="art" style="background-image:url('../assets/images/games/gamepush-hexa-arrows-puzzle/og.webp')"></div>
@@ -1612,7 +1596,7 @@ Progress through levels and discover more objects.</p>
           <div class="embed-snippet" data-embed-panel="markdown">
             <p class="embed-snippet-desc">For READMEs, blog posts and anywhere that renders Markdown.</p>
             <div class="embed-snippet-box">
-              <pre data-embed-code="markdown">[Play CUBE KING on WGPlayground](../games/gamepush-cube-king.html)</pre>
+              <pre data-embed-code="markdown">[Play CUBE KING on MonkeyMart](../games/gamepush-cube-king.html)</pre>
               <button class="embed-copy" data-embed-copy="markdown" type="button">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                 <span>Copy</span>
@@ -1698,7 +1682,7 @@ Progress through levels and discover more objects.</p>
       <div class="embed-frame ads-frame">
         <div class="embed-modal-header">
           <div>
-            <div class="embed-modal-title" id="adsModalTitle">WGPlayground <code>ads.txt</code> entry</div>
+            <div class="embed-modal-title" id="adsModalTitle">MonkeyMart <code>ads.txt</code> entry</div>
             <div class="embed-modal-sub">Add this line to your site's <code>/ads.txt</code> file</div>
           </div>
           <button class="embed-modal-close" type="button" aria-label="Close" data-ads-close>
@@ -1855,7 +1839,7 @@ Progress through levels and discover more objects.</p>
 
 
     <footer>
-                  <div class="foot-grid" data-mm-foot="1">
+                        <div class="foot-grid" data-mm-foot="1">
         <div>
           <a class="brand" href="../index.html" aria-label="MonkeyMart.one home">
             <span class="brand-mark mm-logo-wrap" aria-hidden="true">
@@ -2703,7 +2687,7 @@ window.WG_PUBLISHER_GAMES = [{"name": "World Wars - Tanks", "url": "gamepush-wor
     <button class="streak-modal-close" id="streakModalClose" type="button" aria-label="Close" data-modal-close>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
-    <div class="streak-modal-eyebrow">🔥 Your WGPlayground streak</div>
+    <div class="streak-modal-eyebrow">🔥 Your MonkeyMart streak</div>
     <div class="streak-flame-wrap" id="streakFlameWrap">
       <div class="streak-modal-flame" id="streakModalFlame" aria-hidden="true">🔥</div>
       <div class="streak-flame-glow" aria-hidden="true"></div>
@@ -2721,7 +2705,7 @@ window.WG_PUBLISHER_GAMES = [{"name": "World Wars - Tanks", "url": "gamepush-wor
     <div class="streak-modal-freeze" id="streakModalFreeze">
       ❄️ <span id="streakModalFreezes">0</span> streak-freezes banked &mdash; cover missed days.
     </div>
-    <p class="streak-modal-foot">Counts days you visit WGPlayground. Saved on this device.</p>
+    <p class="streak-modal-foot">Counts days you visit MonkeyMart. Saved on this device.</p>
   </div>
 </div>
 
@@ -2769,7 +2753,7 @@ window.WG_PUBLISHER_GAMES = [{"name": "World Wars - Tanks", "url": "gamepush-wor
     <div class="chub-head">
       <div class="chub-head-main">
         <div class="chub-eyebrow">✦ Weekly Recap</div>
-        <h1 class="chub-h1" id="recapModalTitle">Your week on WGPlayground</h1>
+        <h1 class="chub-h1" id="recapModalTitle">Your week on MonkeyMart</h1>
         <div class="chub-reset" id="recapDateRange">-</div>
       </div>
       <div class="chub-head-right">
@@ -2928,7 +2912,7 @@ window.WG_PUBLISHER_GAMES = [{"name": "World Wars - Tanks", "url": "gamepush-wor
       <div class="chub-head-main">
         <div class="chub-eyebrow">⚔️ Head to head</div>
         <h1 class="chub-h1" id="compareModalTitle">You vs. your friend</h1>
-        <div class="chub-reset" id="compareModalSub">This week on WGPlayground</div>
+        <div class="chub-reset" id="compareModalSub">This week on MonkeyMart</div>
       </div>
       <div class="chub-head-right">
         <button class="chub-close" id="compareClose" type="button" aria-label="Close" data-modal-close>
@@ -3134,7 +3118,7 @@ window.WG_PUBLISHER_GAMES = [{"name": "World Wars - Tanks", "url": "gamepush-wor
       <div class="auth-modal-brand" aria-hidden="true">
         <img class="auth-modal-logo" src="../assets/images/site/logo-square.svg" alt="" width="48" height="48">
       </div>
-      <h2 class="auth-modal-title" id="authModalTitle">Sign in to WGPlayground</h2>
+      <h2 class="auth-modal-title" id="authModalTitle">Sign in to MonkeyMart</h2>
       <p class="auth-modal-sub" id="authModalSub">Save your reviews and ratings across devices.</p>
     </div>
     <ul class="auth-modal-benefits" id="authModalBenefits">
