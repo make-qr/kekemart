@@ -59,11 +59,15 @@
       '</div>' +
       '<div class="grid grid-dense mm-classics-grid" id="mmClassicsGrid"></div>';
 
-    var trendingHead = document.getElementById('grid-trending');
-    if (trendingHead && trendingHead.previousElementSibling) {
-      trendingHead.parentNode.insertBefore(section, trendingHead.previousElementSibling);
+    var anchor =
+      document.querySelector('.mm-home-seo') ||
+      document.querySelector('footer') ||
+      document.getElementById('moreSections');
+    if (anchor) {
+      anchor.parentNode.insertBefore(section, anchor);
     } else {
-      chips.parentNode.insertBefore(section, chips.nextSibling);
+      var chips = document.getElementById('chipScroll');
+      if (chips) chips.parentNode.insertBefore(section, chips.nextSibling);
     }
     return section;
   }
