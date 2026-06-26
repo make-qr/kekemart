@@ -137,30 +137,39 @@
 
   function patchTopNav() {
     var p = pagePrefix();
-    document.querySelectorAll('.top-nav a').forEach(function (a) {
-      var href = a.getAttribute('href') || '';
-      if (href.indexOf('wgplayground.com/games-catalogue') !== -1 || href === 'games-catalogue.html') {
-        a.setAttribute('href', p + 'games-catalogue.html');
-        if (/^games$/i.test((a.textContent || '').trim())) a.textContent = 'All games';
-      }
-      if (href === 'index.html' || href === p + 'index.html') {
-        a.textContent = 'Home';
-      }
-    });
+    var onCatalogue = location.pathname.indexOf('games-catalogue') !== -1;
+    var onHome =
+      location.pathname.endsWith('/') ||
+      location.pathname.endsWith('/index.html') ||
+      /\/kekemart\/?$/.test(location.pathname);
+
     document.querySelectorAll('.top-nav').forEach(function (nav) {
-      if (nav.dataset.mmTopNav) return;
+      Array.prototype.slice.call(nav.querySelectorAll('a')).forEach(function (a) {
+        var href = a.getAttribute('href') || '';
+        if (href.indexOf('wgplayground.com/games-catalogue') !== -1) {
+          a.setAttribute('href', p + 'games-catalogue.html');
+        }
+        if (href === 'index.html' || href === p + 'index.html') {
+          a.remove();
+        }
+      });
+
       var links = nav.querySelectorAll('a');
-      if (links.length !== 1) return;
-      var only = links[0];
-      var catHref = p + 'games-catalogue.html';
-      if ((only.getAttribute('href') || '').indexOf('games-catalogue') === -1) return;
-      only.classList.remove('active');
-      only.textContent = 'All games';
-      var home = document.createElement('a');
-      home.setAttribute('href', p + 'index.html');
-      home.textContent = 'Home';
-      nav.insertBefore(home, only);
-      nav.dataset.mmTopNav = '1';
+      if (!links.length) {
+        var cat = document.createElement('a');
+        cat.setAttribute('href', p + 'games-catalogue.html');
+        cat.textContent = 'Games';
+        nav.appendChild(cat);
+        links = nav.querySelectorAll('a');
+      }
+
+      Array.prototype.forEach.call(links, function (a) {
+        var label = (a.textContent || '').trim();
+        if (/^all games$/i.test(label)) a.textContent = 'Games';
+        var href = a.getAttribute('href') || '';
+        if (href.indexOf('games-catalogue') === -1) return;
+        a.classList.toggle('active', onCatalogue || onHome);
+      });
     });
   }
 
