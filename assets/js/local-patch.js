@@ -16,28 +16,53 @@
     return path.replace(/\//g, '-');
   }
 
+  function pagePrefix() {
+    return location.pathname.indexOf('/games/') !== -1 ? '../' : '';
+  }
+
+  /** Prefix ../ when viewing a page under /games/ so root-relative hrefs resolve correctly. */
+  function normalizeRootHref(url) {
+    if (!url || url.indexOf('http://') === 0 || url.indexOf('https://') === 0) return url;
+    if (url.indexOf('../') === 0 || url.charAt(0) === '/') return url;
+    var p = pagePrefix();
+    return p ? p + url : url;
+  }
+
   function localCatalogueUrl(href) {
     if (!href || href.indexOf('games-catalogue') === -1) return href;
-    if (href.indexOf('wgplayground.com') === -1 && href.indexOf('games-catalogue.html') !== -1) return href;
-    var m = href.match(/games-catalogue\/games\/([^/?#]+)/i);
-    if (m) {
-      return 'games-catalogue.html?cat=' + encodeURIComponent(m[1].toLowerCase());
+    var local = href;
+    var byPath = href.match(/games-catalogue(?:\.html)?\/games\/([^/?#]+)/i);
+    var byPublisher = href.match(/games-catalogue(?:\.html)?\/games-by\/([^/?#]+)/i);
+    var byTag = href.match(/games-catalogue(?:\.html)?\/tags\/([^/?#]+)/i);
+    if (byPath) {
+      local = 'games-catalogue.html?cat=' + encodeURIComponent(byPath[1].toLowerCase());
+    } else if (byPublisher) {
+      local = 'games-catalogue.html?q=' + encodeURIComponent(byPublisher[1].replace(/-/g, ' '));
+    } else if (byTag) {
+      local = 'games-catalogue.html?q=' + encodeURIComponent(byTag[1].replace(/-/g, ' '));
+    } else if (href.indexOf('wgplayground.com') !== -1) {
+      var m = href.match(/games-catalogue\/games\/([^/?#]+)/i);
+      local = m
+        ? 'games-catalogue.html?cat=' + encodeURIComponent(m[1].toLowerCase())
+        : 'games-catalogue.html';
+    } else if (href.indexOf('games-catalogue.html') === -1) {
+      return href;
     }
-    return 'games-catalogue.html';
+    return normalizeRootHref(local);
   }
 
   function localGameUrl(wgpUrl, hash) {
     var routes = window.WGP_GAME_ROUTES || {};
-    if (wgpUrl && routes[wgpUrl]) return routes[wgpUrl];
-    var m = (wgpUrl || '').match(/\/game\/(.+?)\/?$/);
-    if (m) return 'games/' + slugFromPath(m[1]) + '.html';
-    if (hash) return 'game.html?ifr=' + encodeURIComponent(hash);
-    if (wgpUrl && wgpUrl.indexOf('monkey-mart') !== -1) return 'monkey-mart.html';
-    return 'index.html';
-  }
-
-  function pagePrefix() {
-    return location.pathname.indexOf('/games/') !== -1 ? '../' : '';
+    var path;
+    if (wgpUrl && routes[wgpUrl]) path = routes[wgpUrl];
+    else {
+      var m = (wgpUrl || '').match(/\/game\/(.+?)\/?$/);
+      if (m) path = 'games/' + slugFromPath(m[1]) + '.html';
+      else if (hash) path = 'game.html?ifr=' + encodeURIComponent(hash);
+      else if (wgpUrl && wgpUrl.indexOf('monkey-mart') !== -1) path = 'monkey-mart.html';
+      else path = 'index.html';
+    }
+    return normalizeRootHref(path);
   }
 
   function fixOgExtension(url) {
@@ -212,6 +237,24 @@
       a.setAttribute('href', localGameUrl(href, h));
       a.dataset.localGame = '1';
     });
+    document.querySelectorAll('a[href^="games/"], a[href^="game.html"], a[href="monkey-mart.html"]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href || a.dataset.localGamePrefixed) return;
+      var fixed = normalizeRootHref(href);
+      if (fixed !== href) {
+        a.setAttribute('href', fixed);
+        a.dataset.localGamePrefixed = '1';
+      }
+    });
+    document.querySelectorAll('a[href*="games-catalogue.html/"]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href || a.dataset.localCataloguePath) return;
+      var fixed = localCatalogueUrl(href);
+      if (fixed !== href) {
+        a.setAttribute('href', fixed);
+        a.dataset.localCataloguePath = '1';
+      }
+    });
     document.querySelectorAll('img[src*="static.wgplayground.com"], img[src*="scout.wgimager.com"], img[src*="assets/vendor/wgp/static/"], img[src*="/og.jpg"]').forEach(function (img) {
       var src = localImg(img.getAttribute('src'));
       img.setAttribute('src', src);
@@ -291,6 +334,34 @@
     art.style.setProperty('--hero-grad', 'none');
   }
 
+  function gamesCdnBase() {
+    return ((window.MM_BRAND && window.MM_BRAND.gamesCdn) || 'https://games.monkeymart.one').replace(
+      /\/$/,
+      ''
+    );
+  }
+
+  /** Turn data-mm-play / relative paths into absolute games CDN play URLs. */
+  function resolvePlayUrl(url) {
+    if (!url || url === 'about:blank') return '';
+    url = String(url).trim();
+    var base = gamesCdnBase();
+    if (/^https?:\/\//i.test(url)) {
+      if (url.indexOf(base + '/') === 0) {
+        var tail = url.slice(base.length + 1);
+        if (tail.indexOf('projects/') !== 0 && /^[a-zA-Z0-9._-]+\//.test(tail)) {
+          return base + '/projects/' + tail;
+        }
+      }
+      return url;
+    }
+    var hosted = url.match(/(?:^|\/)hosted-games\/(.+)$/);
+    if (hosted) return base + '/projects/' + hosted[1];
+    var rel = url.match(/(?:\.\.\/)*(?:projects\/)?([^/?#]+)\/((?:index|frame|poker)\.html?.*)$/i);
+    if (rel) return base + '/projects/' + rel[1] + '/' + rel[2];
+    return url;
+  }
+
   function fixNativeGameIframe() {
     var iframe = document.getElementById('playerIframe');
     if (!iframe || iframe.dataset.mmPlayReady) return;
@@ -299,9 +370,15 @@
       iframe.getAttribute('src') ||
       '';
     if (!src || src === 'about:blank') return;
-    var local = gamesCdnToLocal(src) || src;
+    var playUrl;
+    if (/hosted-games\//i.test(src)) {
+      playUrl = gamesCdnToLocal(src) || withPagePrefix(src.replace(/^\.\.\//, ''));
+    } else {
+      var resolved = resolvePlayUrl(src) || src;
+      playUrl = gamesCdnToLocal(resolved) || resolved;
+    }
     iframe.dataset.mmPlayReady = '1';
-    iframe.setAttribute('src', local);
+    iframe.setAttribute('src', playUrl);
   }
 
   patchWgDataUrls();
@@ -342,4 +419,6 @@
   } else {
     onReady();
   }
+
+  window.MM_normalizeGameHref = normalizeRootHref;
 })();

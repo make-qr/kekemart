@@ -13,6 +13,7 @@ RAIL_MODALS = ROOT / "templates/mm-rail-modals.html"
 
 THEME_CSS = '<link rel="stylesheet" href="{prefix}assets/css/monkeymart-theme.css" />\n'
 BRAND_JS = (
+    '<script src="{prefix}assets/js/mm-diagnostics.js"></script>\n'
     '<script src="{prefix}assets/js/monkeymart-config.js" defer></script>\n'
     '<script src="{prefix}assets/js/mm-sidebar.js" defer></script>\n'
     '<script src="{prefix}assets/js/monkeymart-brand.js" defer></script>\n'
@@ -59,6 +60,7 @@ HERO_PATCH = """
 
 def strip_head_brand_js(html: str) -> str:
     for name in (
+        "mm-diagnostics.js",
         "monkeymart-config.js",
         "monkeymart-brand.js",
         "mm-native-catalog.js",

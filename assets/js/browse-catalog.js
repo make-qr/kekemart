@@ -12,7 +12,8 @@
   }
 
   function localGamePage(path) {
-    return 'games/' + slugFromPath(path) + '.html';
+    var href = 'games/' + slugFromPath(path) + '.html';
+    return (window.MM_normalizeGameHref && window.MM_normalizeGameHref(href)) || href;
   }
 
   function makeCard(g) {
@@ -132,7 +133,10 @@
         img: g.img || '',
         c: g.c || '#16a34a',
         cats: g.cats || ['MonkeyMart Classics'],
-        _local: 'games/mm-' + slug + '.html',
+        _local: (function () {
+          var href = 'games/mm-' + slug + '.html';
+          return (window.MM_normalizeGameHref && window.MM_normalizeGameHref(href)) || href;
+        })(),
         _source: 'native',
         _popular: !!g.popular,
       });

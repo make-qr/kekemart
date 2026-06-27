@@ -38,8 +38,66 @@ def inject_ga(html: str, measurement_id: str) -> str:
     return html.replace("</head>", snippet + "</head>", 1)
 
 
+def strip_wg_google_ads_stack(html: str) -> str:
+    """Drop WG Funding Choices / reCAPTCHA / ad-consent grants (static site has no WG backend)."""
+    html = re.sub(
+        r"gtag\('consent', 'default', \{\s*'ad_storage': 'granted'[\s\S]*?'analytics_storage': 'granted'\s*\}\);",
+        "gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});",
+        html,
+    )
+    html = re.sub(
+        r"if \(window\.WGP_GA_DEV\) \{[\s\S]*?gtag\('consent', 'update',[\s\S]*?\}\);\s*\}",
+        "",
+        html,
+    )
+    html = re.sub(
+        r"<script>\s*\(function\(\)\s*\{\s*function signalGooglefcPresent[\s\S]*?\}\)\(\);\s*</script>\s*",
+        "",
+        html,
+    )
+    html = re.sub(
+        r'<script async src="https://www\.google\.com/recaptcha/api\.js[^"]*"[^>]*></script>\s*',
+        "",
+        html,
+        flags=re.I,
+    )
+    html = re.sub(
+        r"<script>window\.WG_RECAPTCHA_SITEKEY[\s\S]*?</script>\s*",
+        "",
+        html,
+    )
+    return html
+
+
+def has_ad_slots(html: str) -> bool:
+    if "data-mm-ad=" in html:
+        return True
+    return bool(re.search(r"<ins[^>]+class=\"adsbygoogle\"[^>]+data-ad-slot=", html, re.I))
+
+
+def strip_adsense_scripts(html: str) -> str:
+    """Remove AdSense loader when page has no ad units (avoids red tag-error toast)."""
+    html = re.sub(
+        r'<script[^>]*src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js[^"]*"[^>]*>\s*</script>\s*',
+        "",
+        html,
+        flags=re.I,
+    )
+    html = re.sub(
+        r"<script>\s*\(function\(\)\{\s*var dev=/\^\(localhost[\s\S]*?stripAds\(\)[\s\S]*?\}\)\(\);\s*</script>\s*",
+        "",
+        html,
+        flags=re.I,
+    )
+    return html
+
+
 def inject_adsense(html: str, client_id: str) -> str:
-    if not client_id or "pagead2.googlesyndication.com" in html:
+    if not has_ad_slots(html):
+        return strip_adsense_scripts(html)
+    if not client_id:
+        return html
+    if "pagead2.googlesyndication.com" in html:
         return html
     snippet = f"""<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_id}"
      crossorigin="anonymous"></script>
@@ -405,6 +463,13 @@ def prefix_for_html_path(path: Path, root: Path) -> str:
     return "../" * len(rel.parts)
 
 
+def inject_ad_collapse(html: str, prefix: str) -> str:
+    if "mm-ad-collapse.js" in html or "data-mm-ad=" not in html:
+        return html
+    script = f'<script src="{prefix}assets/js/mm-ad-collapse.js" defer></script>\n'
+    return html.replace("</body>", script + "</body>", 1)
+
+
 def apply_site_extras(
     html: str,
     brand: dict,
@@ -416,6 +481,7 @@ def apply_site_extras(
     analytics = brand.get("analytics") or {}
     html = inject_ga(html, analytics.get("gaMeasurementId", ""))
     html = inject_adsense(html, analytics.get("adsenseClient", ""))
+    html = strip_wg_google_ads_stack(html)
     html = rewrite_games_cdn(html, brand.get("gamesCdn", ""))
     html = cdn_thumbs_to_bundled(html, brand.get("gamesCdn", ""), prefix=prefix)
     html = patch_wg_rebrand(html, brand, html_path=html_path, root=root)
@@ -427,6 +493,7 @@ def apply_site_extras(
     html = patch_brand_mark(html, prefix, brand)
     html = patch_footer_links(html, prefix)
     html = patch_footer_shell(html, prefix, brand)
+    html = inject_ad_collapse(html, prefix)
     return html
 
 

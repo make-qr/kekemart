@@ -25,13 +25,14 @@
 
   function normalizeGameUrl(url) {
     if (!url || url.indexOf('http') === 0) return url;
+    if (window.MM_normalizeGameHref) return window.MM_normalizeGameHref(url);
     var p = pagePrefix();
-    if (url.indexOf('/') !== -1 || url.indexOf('games/') === 0) {
-      return url.indexOf('..') === 0 || url.indexOf('/') === 0 ? url : p + url;
-    }
+    if (!p) return url;
+    if (url.indexOf('../') === 0 || url.charAt(0) === '/') return url;
+    if (url.indexOf('games/') === 0) return p + url;
     if (/^mm-/.test(url)) return p + 'games/' + url;
-    if (/\.html$/.test(url)) return p + 'games/' + url;
-    if (url === 'monkey-mart.html' || url === 'index.html' || url === 'games-catalogue.html') {
+    if (/\.html(\?|#|$)/.test(url)) return p + (url.indexOf('games/') === 0 ? url : 'games/' + url);
+    if (url === 'monkey-mart.html' || url === 'index.html' || url.indexOf('games-catalogue') === 0) {
       return p + url;
     }
     return p + url;

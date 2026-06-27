@@ -16,7 +16,7 @@ ROUTES_JS = ROOT / "assets/js/mm-native-routes.js"
 GAMES_DIR = ROOT / "games"
 WG_SHELL = ROOT / "perfect-match-3d.html"
 
-MONKEY_MART_EMBED = "https://monkeymartfree.com/play/monkey-mart/"
+MONKEY_MART_EMBED = "hosted-games/monkey-mart/index.html"
 
 # Prefer games.monkeymart.one CDN; external mirrors only as last resort.
 EMBED_OVERRIDES: dict[str, str] = {}

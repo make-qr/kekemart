@@ -170,19 +170,44 @@
   }
 
   function hidePublisherOverlays() {
-    var re = /Lỗi mà chỉ|Error that only you will see|Error that only you/i;
+    if (window.__MM_DIAG__) return;
+    var re =
+      /Lỗi mà chỉ|Error that only you will see|Error that only you|Tag error|Lỗi thẻ|lỗi máy chủ|server error|adsbygoogle\.push/i;
     function scan() {
-      document.querySelectorAll('body div, body span, body ins').forEach(function (el) {
-        if (el.closest('.topbar, .rail, footer, .player-frame, .embed-modal')) return;
+      document.querySelectorAll('body div, body span, body ins, body iframe').forEach(function (el) {
+        if (el.closest('.topbar, .rail, footer, .embed-modal')) return;
+        if (el.id === 'playerIframe') return;
         var t = (el.textContent || '').trim();
-        if (!t || t.length > 180 || !re.test(t)) return;
+        if (!t || t.length > 220 || !re.test(t)) return;
         var box = el;
-        for (var i = 0; i < 4 && box.parentElement; i++) {
-          if (box.style.position === 'fixed' || (box.className && String(box.className).indexOf('toast') !== -1)) break;
+        for (var i = 0; i < 6 && box.parentElement; i++) {
+          if (
+            box.style.position === 'fixed' ||
+            (box.className && String(box.className).indexOf('toast') !== -1) ||
+            box.classList.contains('mm-ad') ||
+            box.closest('.player-frame')
+          ) {
+            break;
+          }
           box = box.parentElement;
         }
         box.style.setProperty('display', 'none', 'important');
         box.setAttribute('aria-hidden', 'true');
+        if (box.classList && box.classList.contains('mm-ad')) {
+          box.classList.add('is-empty');
+        }
+      });
+      document.querySelectorAll('.player-frame .mm-ad, .player-frame ins.adsbygoogle').forEach(function (el) {
+        var wrap = el.closest('.mm-ad') || el.parentElement;
+        if (wrap) wrap.classList.add('is-empty');
+        el.style.setProperty('display', 'none', 'important');
+      });
+      document.querySelectorAll('.mm-ad ins.adsbygoogle').forEach(function (ins) {
+        var st = ins.getAttribute('data-ad-status');
+        if (st === 'unfilled' || st === 'error') {
+          var wrap = ins.closest('.mm-ad');
+          if (wrap) wrap.classList.add('is-empty');
+        }
       });
     }
     scan();

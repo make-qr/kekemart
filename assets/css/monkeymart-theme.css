@@ -379,3 +379,13 @@ html[data-native-game] #verdictBanner {
   font-size: 14px;
   line-height: 1.55;
 }
+
+/* Google ad/recaptcha dev overlays — not used on static deploy */
+.grecaptcha-badge,
+.grecaptcha-error,
+ins.adsbygoogle,
+iframe[name="googlefcPresent"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
