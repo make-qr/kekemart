@@ -22,7 +22,7 @@
     "meta": "Casual · Simulation · Idle",
     "copy": "Run your own monkey supermarket! Harvest bananas, stock shelves, serve customers, hire helper monkeys, and expand your store.",
     "url": "monkey-mart.html",
-    "iframe": "https://monkeymartfree.com/play/monkey-mart/",
+    "iframe": "hosted-games/monkey-mart/index.html",
     "c": "#16a34a",
     "img": "assets/images/site/monkey-mart-logo.png"
   },

@@ -338,12 +338,7 @@
 
 
 
-  gtag('consent', 'default', {
-    'ad_storage': 'granted',
-    'ad_user_data': 'granted',
-    'ad_personalization': 'granted',
-    'analytics_storage': 'granted'
-  });
+  gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
 
 
 
@@ -352,35 +347,7 @@
     return h === 'localhost' || h === '127.0.0.1' ||
            /^dev/i.test(h) || /^staging/i.test(h) || h.indexOf('.local') !== -1;
   })();
-  if (window.WGP_GA_DEV) {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
-
-</script>
-
-<script>
-
-  (function() {
-    function signalGooglefcPresent() {
-      if (!window.frames['googlefcPresent']) {
-        if (document.body) {
-          var iframe = document.createElement('iframe');
-          iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;';
-          iframe.style.display = 'none';
-          iframe.name = 'googlefcPresent';
-          document.body.appendChild(iframe);
-        } else {
-          setTimeout(signalGooglefcPresent, 0);
-        }
-      }
-    }
-    signalGooglefcPresent();
-  })();
+  
 
 </script>
 
@@ -446,8 +413,6 @@
   gtag('js', new Date());
   gtag('config', 'G-SWBWGBV5PB');
 </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4151519079019358"
-     crossorigin="anonymous"></script>
 </head>
 <script src="assets/js/local-patch.js"></script>
 <script src="assets/js/wg-catalog.js"></script>
@@ -3156,8 +3121,6 @@ window.WG_PUBLISHER_GAMES = [
 <script src="assets/vendor/wgp/public/v6/js/chrome.min.js"></script>
 <script src="assets/vendor/wgp/public/v6/js/tracking.min.js"></script>
 
-<script>window.WG_RECAPTCHA_SITEKEY = '6Lffw0IkAAAAAIz0Nbb0_vdT8EiIr9UNWfvtifid';</script>
-<script async src="https://www.google.com/recaptcha/api.js?render=6Lffw0IkAAAAAIz0Nbb0_vdT8EiIr9UNWfvtifid"></script>
 <script src="assets/vendor/wgp/public/v6/js/game.min.js"></script>
 <script src="assets/vendor/wgp/public/v6/js/game-features.min.js"></script>
 <script src="assets/vendor/wgp/public/v6/js/rating.min.js"></script>

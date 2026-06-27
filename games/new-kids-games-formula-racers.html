@@ -339,12 +339,7 @@
 
 
 
-  gtag('consent', 'default', {
-    'ad_storage': 'granted',
-    'ad_user_data': 'granted',
-    'ad_personalization': 'granted',
-    'analytics_storage': 'granted'
-  });
+  gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'granted'});
 
 
 
@@ -353,35 +348,7 @@
     return h === 'localhost' || h === '127.0.0.1' ||
            /^dev/i.test(h) || /^staging/i.test(h) || h.indexOf('.local') !== -1;
   })();
-  if (window.WGP_GA_DEV) {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
-
-</script>
-
-<script>
-
-  (function() {
-    function signalGooglefcPresent() {
-      if (!window.frames['googlefcPresent']) {
-        if (document.body) {
-          var iframe = document.createElement('iframe');
-          iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;';
-          iframe.style.display = 'none';
-          iframe.name = 'googlefcPresent';
-          document.body.appendChild(iframe);
-        } else {
-          setTimeout(signalGooglefcPresent, 0);
-        }
-      }
-    }
-    signalGooglefcPresent();
-  })();
+  
 
 </script>
 
@@ -447,12 +414,11 @@
   gtag('js', new Date());
   gtag('config', 'G-SWBWGBV5PB');
 </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4151519079019358"
-     crossorigin="anonymous"></script>
 <link rel="canonical" href="https://monkeymart.one/games/new-kids-games-formula-racers.html" />
 <script type="application/ld+json" id="mm-jsonld">[{"@context": "https://schema.org", "@type": "VideoGame", "name": "Formula Racers", "description": "Play Formula Racers game online and for free at NewKidsGames.org. Racing carriers in the amount of three units have already embarked on their positions at the start.", "url": "https://monkeymart.one/games/new-kids-games-formula-racers.html", "image": "https://monkeymart.one/assets/images/games/new-kids-games-formula-racers/og.webp", "genre": ["Browser game", "Free online game"], "gamePlatform": ["Web browser", "Android", "iOS"], "applicationCategory": "Game", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "MonkeyMart.one", "url": "https://monkeymart.one"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://monkeymart.one"}, {"@type": "ListItem", "position": 2, "name": "Monkey Mart", "item": "https://monkeymart.one/monkey-mart.html"}, {"@type": "ListItem", "position": 3, "name": "All games", "item": "https://monkeymart.one/games-catalogue.html"}, {"@type": "ListItem", "position": 4, "name": "Formula Racers", "item": "https://monkeymart.one/games/new-kids-games-formula-racers.html"}]}]</script>
 <link rel="stylesheet" href="../assets/css/monkeymart-theme.css" />
 </head>
+<script src="../assets/js/mm-images.js"></script>
 <script src="../assets/js/local-patch.js"></script>
 
 <body data-page="game">
@@ -1782,7 +1748,7 @@ Progress through levels and discover more objects.</p>
 
 
     <footer>
-                                                      <div class="foot-grid" data-mm-foot="1">
+                                                            <div class="foot-grid" data-mm-foot="1">
         <div>
           <a class="brand" href="../index.html" aria-label="MonkeyMart.one home">
             <span class="brand-mark mm-logo-wrap" aria-hidden="true">
@@ -3156,8 +3122,6 @@ window.WG_PUBLISHER_GAMES = [{"name": "Mr. Bean Find the Stars", "url": "new-kid
 <script src="../assets/vendor/wgp/public/v6/js/chrome.min.js"></script>
 <script src="../assets/vendor/wgp/public/v6/js/tracking.min.js"></script>
 
-<script>window.WG_RECAPTCHA_SITEKEY = '6Lffw0IkAAAAAIz0Nbb0_vdT8EiIr9UNWfvtifid';</script>
-<script async src="https://www.google.com/recaptcha/api.js?render=6Lffw0IkAAAAAIz0Nbb0_vdT8EiIr9UNWfvtifid"></script>
 <script src="../assets/vendor/wgp/public/v6/js/game.min.js"></script>
 <script src="../assets/vendor/wgp/public/v6/js/game-features.min.js"></script>
 <script src="../assets/vendor/wgp/public/v6/js/rating.min.js"></script>
@@ -3184,6 +3148,7 @@ window.WG_PUBLISHER_GAMES = [{"name": "Mr. Bean Find the Stars", "url": "new-kid
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"e1fd1b19226f421780fa3d3bec14ccdb","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script src="../assets/js/mm-rail-sync.js"></script>
+<script src="../assets/js/mm-diagnostics.js"></script>
 <script src="../assets/js/monkeymart-config.js" defer></script>
 <script src="../assets/js/mm-native-catalog.js"></script>
 <script src="../assets/js/mm-sidebar.js" defer></script>
