@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^ads\.txt$ https://adstxt.wgplayer.com/monkeymart.one/ads.txt [R=301,L]
