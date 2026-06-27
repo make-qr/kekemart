@@ -3,7 +3,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "1v1.lol",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/1v1.lol/splash.png",
-    "play": "https://games.monkeymart.one/projects/1v1.lol/index.html",
+    "play": "projects/1v1.lol/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -18,7 +18,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "2048",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/2048/thumb.png",
-    "play": "https://games.monkeymart.one/projects/2048/index.html",
+    "play": "projects/2048/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -32,7 +32,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "9007199254740992",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/9007199254740992/logo-4.png",
-    "play": "https://games.monkeymart.one/projects/9007199254740992/index.html",
+    "play": "projects/9007199254740992/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -45,7 +45,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Ages Of Conflict",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/ages-of-conflict/splash.jpg",
-    "play": "https://games.monkeymart.one/projects/ages-of-conflict/index.html",
+    "play": "projects/ages-of-conflict/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -58,7 +58,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Among Us",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/among-us/penumbra.png",
-    "play": "https://games.monkeymart.one/projects/among-us/index.html",
+    "play": "projects/among-us/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -72,7 +72,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "A Small World Cup",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/a-small-world-cup/icon-256.png",
-    "play": "https://games.monkeymart.one/projects/a-small-world-cup/index.html",
+    "play": "projects/a-small-world-cup/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -85,7 +85,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Baldi's Basics",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/baldis-basics/baldis-basics.png",
-    "play": "https://games.monkeymart.one/projects/baldis-basics/index.html",
+    "play": "projects/baldis-basics/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -98,7 +98,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Ball Sort Puzzle",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/ball-sort-puzzle/thumb.png",
-    "play": "https://games.monkeymart.one/projects/ball-sort-puzzle/frame.html",
+    "play": "projects/ball-sort-puzzle/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -111,7 +111,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Basket and Ball",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/basket-and-ball/thumb.jpg",
-    "play": "https://games.monkeymart.one/projects/basket-and-ball/frame.html",
+    "play": "projects/basket-and-ball/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -124,7 +124,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Bitlife",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/bitlife/thumb.png",
-    "play": "https://games.monkeymart.one/projects/bitlife/index.html",
+    "play": "projects/bitlife/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -137,7 +137,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Blackjack",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/blackjack/thumb.png",
-    "play": "https://games.monkeymart.one/projects/blackjack/index.html",
+    "play": "projects/blackjack/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -150,7 +150,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Block the Pig",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/block-the-pig/thumb.png",
-    "play": "https://games.monkeymart.one/projects/block-the-pig/frame.html",
+    "play": "projects/block-the-pig/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -163,7 +163,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Cell Machine",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/cell-machine/img/icon.png",
-    "play": "https://games.monkeymart.one/projects/cell-machine/index.html",
+    "play": "projects/cell-machine/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -176,7 +176,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Chrome Dino",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/chrome-dino/icons/icon-16.png",
-    "play": "https://games.monkeymart.one/projects/chrome-dino/index.html",
+    "play": "projects/chrome-dino/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -189,7 +189,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "circlO",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/circlo/img/icon.png",
-    "play": "https://games.monkeymart.one/projects/circlo/index.html",
+    "play": "projects/circlo/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -202,7 +202,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Cookie Clicker",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/cookie-clicker/img/perfectCookie.png",
-    "play": "https://games.monkeymart.one/projects/cookie-clicker/index.html",
+    "play": "projects/cookie-clicker/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -217,7 +217,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Core Ball",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/core-ball/pr_source.png",
-    "play": "https://games.monkeymart.one/projects/core-ball/index.html",
+    "play": "projects/core-ball/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -230,7 +230,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Cut The Rope",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/ctr-time-travel/thumb.png",
-    "play": "https://games.monkeymart.one/projects/ctr-time-travel/index.html",
+    "play": "projects/ctr-time-travel/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -243,7 +243,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Death Run 3D",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/death-run-3d/img/death.png",
-    "play": "https://games.monkeymart.one/projects/death-run-3d/index.html",
+    "play": "projects/death-run-3d/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -256,7 +256,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Doodle Jump",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/doodle-jump/doodle.png",
-    "play": "https://games.monkeymart.one/projects/doodle-jump/index.html",
+    "play": "projects/doodle-jump/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -269,7 +269,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Drift Boss",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/drift-boss/drift-boss.png",
-    "play": "https://games.monkeymart.one/projects/drift-boss/index.html",
+    "play": "projects/drift-boss/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -282,7 +282,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Drift Hunters",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/drift-hunters/thumb.png",
-    "play": "https://games.monkeymart.one/projects/drift-hunters/index.html",
+    "play": "projects/drift-hunters/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -295,7 +295,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Duck Life 4",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/ducklife4/splash.jpg",
-    "play": "https://games.monkeymart.one/projects/ducklife4/index.html",
+    "play": "projects/ducklife4/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -308,7 +308,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "EaglerCraft",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/eaglercraft/icon.jpeg",
-    "play": "https://games.monkeymart.one/projects/eaglercraft/index.html",
+    "play": "projects/eaglercraft/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -321,7 +321,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Edge Surf",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/edge-surf/icons/icon-256.png",
-    "play": "https://games.monkeymart.one/projects/edge-surf/index.html",
+    "play": "projects/edge-surf/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -334,7 +334,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Flappy Bird",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/flappy-bird/assets/thumb.png",
-    "play": "https://games.monkeymart.one/projects/flappy-bird/index.html",
+    "play": "projects/flappy-bird/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -348,7 +348,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Fruit Ninja",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fruit-ninja/thumb.png",
-    "play": "https://games.monkeymart.one/projects/fruit-ninja/index.html",
+    "play": "projects/fruit-ninja/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -361,7 +361,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Geometry Dash",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/geodash/geoscratchicon.png",
-    "play": "https://games.monkeymart.one/projects/geodash/index.html",
+    "play": "projects/geodash/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -374,7 +374,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Geometry Dash",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/geodash-subzero/geodash-subzero.png",
-    "play": "https://games.monkeymart.one/projects/geodash-subzero/index.html",
+    "play": "projects/geodash-subzero/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -387,7 +387,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Google Feud",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/google-feud/splash.png",
-    "play": "https://games.monkeymart.one/projects/google-feud/index.html",
+    "play": "projects/google-feud/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -400,7 +400,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Google Snake",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/google-snake/google-snake.png",
-    "play": "https://games.monkeymart.one/projects/google-snake/index.html",
+    "play": "projects/google-snake/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -413,7 +413,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Hextris",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/hextris/images/hextris-logo.png",
-    "play": "https://games.monkeymart.one/projects/hextris/index.html",
+    "play": "projects/hextris/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -422,11 +422,26 @@ window.MM_NATIVE_CATALOG = {
     "popular": false,
     "native": true
   },
+  "idle-breakout": {
+    "name": "Idle Breakout",
+    "by": "MonkeyMart.one",
+    "img": "assets/images/mm-native/idle-breakout/thumb.png",
+    "play": "projects/idle-breakout/frame.html",
+    "embedMode": "local",
+    "cats": [
+      "MonkeyMart Classics",
+      "Casual",
+      "Idle"
+    ],
+    "c": "#16a34a",
+    "popular": false,
+    "native": true
+  },
   "little-alchemy": {
     "name": "Little Alchemy 2",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/little-alchemy/unnamed.png",
-    "play": "https://games.monkeymart.one/projects/little-alchemy/frame.html",
+    "play": "projects/little-alchemy/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -439,7 +454,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Madalin Stunt Cars 2",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/madalin-stunt-cars-2/img/logo.jpg",
-    "play": "https://games.monkeymart.one/projects/madalin-stunt-cars-2/index.html",
+    "play": "projects/madalin-stunt-cars-2/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -452,7 +467,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Madalin Stunt Cars 3",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/madalin-stunt-cars-3/img/index.jpg",
-    "play": "https://games.monkeymart.one/projects/madalin-stunt-cars-3/index.html",
+    "play": "projects/madalin-stunt-cars-3/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -465,7 +480,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Mario",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/mario/Theme/Mario.jpg",
-    "play": "https://games.monkeymart.one/projects/mario/index.html",
+    "play": "projects/mario/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -480,7 +495,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Minecraft Classic",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/minecraft/thumb.png",
-    "play": "https://games.monkeymart.one/projects/minecraft/index.html",
+    "play": "projects/minecraft/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -494,7 +509,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Minesweeper",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/minesweeper/img/minesweeper.png",
-    "play": "https://games.monkeymart.one/projects/minesweeper/index.html",
+    "play": "projects/minesweeper/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -508,7 +523,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Pac-Man",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/pacman/thumbnail.png",
-    "play": "https://games.monkeymart.one/projects/pacman/index.html",
+    "play": "projects/pacman/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -523,7 +538,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Paper.io 2",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/paperio2/images/icon512.png",
-    "play": "https://games.monkeymart.one/projects/paperio2/index.html",
+    "play": "projects/paperio2/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -536,10 +551,24 @@ window.MM_NATIVE_CATALOG = {
     "name": "Papery Planes",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/papery-planes/thumb.png",
-    "play": "https://games.monkeymart.one/projects/papery-planes/index.html",
+    "play": "projects/papery-planes/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
+    ],
+    "c": "#ec4899",
+    "popular": false,
+    "native": true
+  },
+  "poker": {
+    "name": "Poker",
+    "by": "MonkeyMart.one",
+    "img": "assets/images/mm-native/poker/static/images/logo.png",
+    "play": "projects/poker/poker.html",
+    "embedMode": "local",
+    "cats": [
+      "MonkeyMart Classics",
+      "Card"
     ],
     "c": "#ec4899",
     "popular": false,
@@ -549,7 +578,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Project Sand",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/project-sand/assets/thumb.png",
-    "play": "https://games.monkeymart.one/projects/project-sand/index.html",
+    "play": "projects/project-sand/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -562,7 +591,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Retro Bowl",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/retro-bowl/img/splash.png",
-    "play": "https://games.monkeymart.one/projects/retro-bowl/index.html",
+    "play": "projects/retro-bowl/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -577,7 +606,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Retro Bowl College",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/retro-bowl-college/unnamed.png",
-    "play": "https://games.monkeymart.one/projects/retro-bowl-college/index.html",
+    "play": "projects/retro-bowl-college/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -592,7 +621,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Rocketpult",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/rocketpult/icons/loading-logo.png",
-    "play": "https://games.monkeymart.one/projects/rocketpult/index.html",
+    "play": "projects/rocketpult/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -605,7 +634,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Rooftop Snipers",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/rooftop-snipers/thumb.png",
-    "play": "https://games.monkeymart.one/projects/rooftop-snipers/frame.html",
+    "play": "projects/rooftop-snipers/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -618,7 +647,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Sand Tetris",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/sandtrix/thumb.png",
-    "play": "https://games.monkeymart.one/projects/sandtrix/index.html",
+    "play": "projects/sandtrix/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -631,7 +660,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Save the Doge",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/save-the-doge/thumb.png",
-    "play": "https://games.monkeymart.one/projects/save-the-doge/frame.html",
+    "play": "projects/save-the-doge/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -644,7 +673,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Slope",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/slope/slope4.jpeg",
-    "play": "https://games.monkeymart.one/projects/slope/index.html",
+    "play": "projects/slope/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -659,7 +688,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Smash Karts",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/smash-karts/smash-karts.png",
-    "play": "https://games.monkeymart.one/projects/smash-karts/index.html",
+    "play": "projects/smash-karts/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -672,7 +701,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Solitare",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/solitaire/screen-shot-win.png",
-    "play": "https://games.monkeymart.one/projects/solitaire/index.html",
+    "play": "projects/solitaire/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -686,7 +715,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Solitare (MS)",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/ms-solitaire/unnamed.png",
-    "play": "https://games.monkeymart.one/projects/ms-solitaire/index.html",
+    "play": "projects/ms-solitaire/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -700,7 +729,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Stack",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/stack/icon.png",
-    "play": "https://games.monkeymart.one/projects/stack/index.html",
+    "play": "projects/stack/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -713,7 +742,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Stickman Hook",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/stickman-hook/unnamed.jpg",
-    "play": "https://games.monkeymart.one/projects/stickman-hook/frame.html",
+    "play": "projects/stickman-hook/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -726,7 +755,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Temple Run 2",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/temple-run-2/6bbd8797ffdaf4e4c44b49e4732c9bf1.webp",
-    "play": "https://games.monkeymart.one/projects/temple-run-2/index.html",
+    "play": "projects/temple-run-2/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -739,7 +768,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Tomb of the Mask",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/totm/thumb.png",
-    "play": "https://games.monkeymart.one/projects/totm/index.html",
+    "play": "projects/totm/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -752,7 +781,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Tunnel Rush",
     "by": "MonkeyMart.one",
     "img": "assets/images/site/game-fallback.png",
-    "play": "https://games.monkeymart.one/projects/tunnel-rush/index.html",
+    "play": "projects/tunnel-rush/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -765,7 +794,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Waterworks!",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/waterworks/thumb.png",
-    "play": "https://games.monkeymart.one/projects/waterworks/index.html",
+    "play": "projects/waterworks/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -778,7 +807,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "We Become what we Behold",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/wbwwb/thumb.png",
-    "play": "https://games.monkeymart.one/projects/wbwwb/index.html",
+    "play": "projects/wbwwb/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics"
@@ -791,7 +820,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "1 - Forest",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fireboy-and-watergirl-1/thumb.jpeg",
-    "play": "https://games.monkeymart.one/projects/fireboy-and-watergirl-1/index.html",
+    "play": "projects/fireboy-and-watergirl-1/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -806,7 +835,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "2 - Light",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fireboy-and-watergirl-2/thumb.jpeg",
-    "play": "https://games.monkeymart.one/projects/fireboy-and-watergirl-2/index.html",
+    "play": "projects/fireboy-and-watergirl-2/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -821,7 +850,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "3 - Ice",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fireboy-and-watergirl-3/thumb.jpeg",
-    "play": "https://games.monkeymart.one/projects/fireboy-and-watergirl-3/index.html",
+    "play": "projects/fireboy-and-watergirl-3/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -836,7 +865,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "4 - Crystal",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fireboy-and-watergirl-4/thumb.jpeg",
-    "play": "https://games.monkeymart.one/projects/fireboy-and-watergirl-4/index.html",
+    "play": "projects/fireboy-and-watergirl-4/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -851,7 +880,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "5 - Elements",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fireboy-and-watergirl-5/thumb.png",
-    "play": "https://games.monkeymart.one/projects/fireboy-and-watergirl-5/index.html",
+    "play": "projects/fireboy-and-watergirl-5/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -866,7 +895,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "6 - Fairy Tales",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fireboy-and-watergirl-6/thumb.jpg",
-    "play": "https://games.monkeymart.one/projects/fireboy-and-watergirl-6/index.html",
+    "play": "projects/fireboy-and-watergirl-6/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -881,7 +910,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "FNAF 1",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fnaf-1/favicon.png",
-    "play": "https://games.monkeymart.one/projects/fnaf-1/index.html",
+    "play": "projects/fnaf-1/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -896,7 +925,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "FNAF 2",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fnaf-2/fnaf-2.jpg",
-    "play": "https://games.monkeymart.one/projects/fnaf-2/index.html",
+    "play": "projects/fnaf-2/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -911,7 +940,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "FNAF 3",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fnaf-3/fnaf-3.png",
-    "play": "https://games.monkeymart.one/projects/fnaf-3/index.html",
+    "play": "projects/fnaf-3/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -926,7 +955,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "FNAF 4",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fnaf-4/thumb.png",
-    "play": "https://games.monkeymart.one/projects/fnaf-4/frame.html",
+    "play": "projects/fnaf-4/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -941,7 +970,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Sister Location",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fnaf-5/favicon.jpg",
-    "play": "https://games.monkeymart.one/projects/fnaf-5/index.html",
+    "play": "projects/fnaf-5/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -956,7 +985,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "FNAF UCN",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/fnaf-ucn/thumb.png",
-    "play": "https://games.monkeymart.one/projects/fnaf-ucn/index.html",
+    "play": "projects/fnaf-ucn/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -971,7 +1000,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Moto X3M",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/moto-x3m/moto-x3m.png",
-    "play": "https://games.monkeymart.one/projects/moto-x3m/index.html",
+    "play": "projects/moto-x3m/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -986,7 +1015,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Moto X3M 2",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/moto-x3m-2/moto-x3m-2.png",
-    "play": "https://games.monkeymart.one/projects/moto-x3m-2/index.html",
+    "play": "projects/moto-x3m-2/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1001,7 +1030,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Moto X3M Winter",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/moto-x3m-winter/moto-x3m-winter.jpg",
-    "play": "https://games.monkeymart.one/projects/moto-x3m-winter/index.html",
+    "play": "projects/moto-x3m-winter/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1016,7 +1045,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Moto X3M Pool Party",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/moto-x3m-pool-party/moto-x3m-pool-party.png",
-    "play": "https://games.monkeymart.one/projects/moto-x3m-pool-party/index.html",
+    "play": "projects/moto-x3m-pool-party/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1031,7 +1060,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Moto X3M Spooky Land",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/moto-x3m-spooky-land/moto-x3m-spooky-land.png",
-    "play": "https://games.monkeymart.one/projects/moto-x3m-spooky-land/index.html",
+    "play": "projects/moto-x3m-spooky-land/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1042,11 +1071,71 @@ window.MM_NATIVE_CATALOG = {
     "popular": false,
     "native": true
   },
+  "basket-random": {
+    "name": "Basket Random",
+    "by": "MonkeyMart.one",
+    "img": "assets/images/mm-native/basket-random/basket-random.jpeg",
+    "play": "projects/basket-random/frame.html",
+    "embedMode": "local",
+    "cats": [
+      "MonkeyMart Classics",
+      "2 Players",
+      "Random"
+    ],
+    "c": "#16a34a",
+    "popular": false,
+    "native": true
+  },
+  "boxing-random": {
+    "name": "Boxing Random",
+    "by": "MonkeyMart.one",
+    "img": "assets/images/mm-native/boxing-random/unnamed.png",
+    "play": "projects/boxing-random/frame.html",
+    "embedMode": "local",
+    "cats": [
+      "MonkeyMart Classics",
+      "2 Players",
+      "Random"
+    ],
+    "c": "#f59e0b",
+    "popular": false,
+    "native": true
+  },
+  "soccer-random": {
+    "name": "Soccer Random",
+    "by": "MonkeyMart.one",
+    "img": "assets/images/mm-native/soccer-random/unnamed.png",
+    "play": "projects/soccer-random/frame.html",
+    "embedMode": "local",
+    "cats": [
+      "MonkeyMart Classics",
+      "2 Players",
+      "Random"
+    ],
+    "c": "#ec4899",
+    "popular": false,
+    "native": true
+  },
+  "volley-random": {
+    "name": "Volley Random",
+    "by": "MonkeyMart.one",
+    "img": "assets/images/mm-native/volley-random/unnamed.png",
+    "play": "projects/volley-random/frame.html",
+    "embedMode": "local",
+    "cats": [
+      "MonkeyMart Classics",
+      "2 Players",
+      "Random"
+    ],
+    "c": "#f59e0b",
+    "popular": false,
+    "native": true
+  },
   "snail-bob": {
     "name": "Snail Bob",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob/snail-bob.png",
-    "play": "https://games.monkeymart.one/projects/snail-bob/frame.html",
+    "play": "projects/snail-bob/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1061,7 +1150,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Snail Bob 2",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob-2/snail-bob-2.png",
-    "play": "https://games.monkeymart.one/projects/snail-bob-2/frame.html",
+    "play": "projects/snail-bob-2/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1076,7 +1165,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Snail Bob 3",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob-3/snail-bob-3.png",
-    "play": "https://games.monkeymart.one/projects/snail-bob-3/frame.html",
+    "play": "projects/snail-bob-3/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1091,7 +1180,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Snail Bob 4",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob-4/snail-bob-4.png",
-    "play": "https://games.monkeymart.one/projects/snail-bob-4/frame.html",
+    "play": "projects/snail-bob-4/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1106,7 +1195,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Snail Bob 5",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob-5/snail-bob-5.jpg",
-    "play": "https://games.monkeymart.one/projects/snail-bob-5/frame.html",
+    "play": "projects/snail-bob-5/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1121,7 +1210,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Snail Bob 6",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob-6/snail-bob-6.png",
-    "play": "https://games.monkeymart.one/projects/snail-bob-6/frame.html",
+    "play": "projects/snail-bob-6/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1136,7 +1225,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Snail Bob 7",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob-7/9aefc9ef4a7f4d5d8062cfb563cc658c-512x512.jpeg",
-    "play": "https://games.monkeymart.one/projects/snail-bob-7/frame.html",
+    "play": "projects/snail-bob-7/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1151,7 +1240,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Snail Bob 8",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/snail-bob-8/snail-bob-8.jpg",
-    "play": "https://games.monkeymart.one/projects/snail-bob-8/frame.html",
+    "play": "projects/snail-bob-8/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1166,7 +1255,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Vex 3",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/vex3/vex3.png",
-    "play": "https://games.monkeymart.one/projects/vex3/index.html",
+    "play": "projects/vex3/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1181,7 +1270,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Vex 4",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/vex4/vex4.png",
-    "play": "https://games.monkeymart.one/projects/vex4/index.html",
+    "play": "projects/vex4/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1196,7 +1285,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Vex 5",
     "by": "MonkeyMart.one",
     "img": "assets/images/mm-native/vex5/vex.jpg",
-    "play": "https://games.monkeymart.one/projects/vex5/index.html",
+    "play": "projects/vex5/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
@@ -1211,7 +1300,7 @@ window.MM_NATIVE_CATALOG = {
     "name": "Vex 6",
     "by": "MonkeyMart.one",
     "img": "assets/images/site/game-fallback.png",
-    "play": "https://games.monkeymart.one/projects/vex6/index.html",
+    "play": "projects/vex6/index.html",
     "embedMode": "local",
     "cats": [
       "MonkeyMart Classics",
