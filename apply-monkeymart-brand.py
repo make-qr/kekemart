@@ -473,7 +473,11 @@ def main() -> None:
     from seo_build import collect_sitemap_urls, patch_catalog_page, patch_home_page, write_robots_txt, write_sitemap_xml
 
     brand = load_brand()
-    pages = [ROOT / "index.html", ROOT / "games-catalogue.html"]
+    import subprocess
+    import sys
+
+    subprocess.run([sys.executable, str(ROOT / "build-404-page.py")], cwd=ROOT, check=True)
+    pages = [ROOT / "index.html", ROOT / "games-catalogue.html", ROOT / "404.html"]
     for path in pages:
         if not path.exists():
             continue
@@ -566,8 +570,10 @@ def main() -> None:
             page = "games"
         elif rel.name == "games-catalogue.html":
             page = "games-catalogue"
-        elif rel.name in ("index.html", "game.html", "monkey-mart.html", "a.html"):
-            page = rel.stem if rel.name != "index.html" else "index"
+        elif rel.name in ("index.html", "game.html", "monkey-mart.html", "a.html", "404.html"):
+            page = rel.stem if rel.name not in ("index.html", "404.html") else (
+                "index" if rel.name == "index.html" else "404"
+            )
         else:
             continue
         html = path.read_text(encoding="utf-8", errors="replace")

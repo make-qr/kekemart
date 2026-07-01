@@ -14,6 +14,7 @@ echo "=== Legacy: $LEGACY_3T"
 cd "$SRC"
 python3 import-monkeymart-games.py --source "$NATIVE_SRC"
 python3 build-seo-assets.py
+python3 build-404-page.py
 
 mkdir -p "$DEST"
 rsync -a --delete \

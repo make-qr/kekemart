@@ -407,6 +407,107 @@ html[data-native-game] #verdictBanner {
   line-height: 1.55;
 }
 
+/* 404 page */
+.shell--404 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+.page-404-hero {
+  text-align: center;
+  padding: 32px 16px 28px;
+  margin-bottom: 8px;
+}
+
+.page-404-code {
+  margin: 0 0 8px;
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+  opacity: 0.35;
+}
+
+.page-404-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.page-404-lead {
+  margin: 0 auto 20px;
+  max-width: 36rem;
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.page-404-lead code {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--bg-2);
+  color: var(--ink);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.page-404-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.page-404-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--rule);
+}
+
+.page-404-actions .btn-primary {
+  background: var(--accent);
+  border-color: var(--accent-deep);
+  color: #fff;
+}
+
+.page-404-actions .btn-ghost {
+  background: var(--bg-2);
+  color: var(--ink);
+}
+
+.page-404-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+body[data-page="404"] footer {
+  text-align: center;
+  padding: 24px 16px 40px;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+body[data-page="404"] footer a {
+  color: var(--accent-deep);
+}
+
 /* Google ad/recaptcha dev overlays — not used on static deploy */
 .grecaptcha-badge,
 .grecaptcha-error,
