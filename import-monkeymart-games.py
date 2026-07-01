@@ -16,7 +16,7 @@ ROUTES_JS = ROOT / "assets/js/mm-native-routes.js"
 GAMES_DIR = ROOT / "games"
 WG_SHELL = ROOT / "perfect-match-3d.html"
 
-MONKEY_MART_EMBED = "hosted-games/monkey-mart/index.html"
+MONKEY_MART_EMBED = "https://monkeymartfree.com/play/monkey-mart/"
 
 # Prefer games.monkeymart.one CDN; external mirrors only as last resort.
 EMBED_OVERRIDES: dict[str, str] = {}
@@ -395,7 +395,17 @@ def resolve_embed(source: Path, slug: str, ext_map: dict[str, str], href: str = 
 def iframe_src_for_page(embed: str) -> str:
     if embed.startswith("http://") or embed.startswith("https://"):
         return embed
-    return "../" + embed.lstrip("/")
+    brand_path = ROOT / "brand/monkeymart.json"
+    cdn = "https://games.monkeymart.one"
+    if brand_path.is_file():
+        cdn = json.loads(brand_path.read_text(encoding="utf-8")).get("gamesCdn", cdn)
+    base = cdn.rstrip("/")
+    path = embed.lstrip("/")
+    if path.startswith("hosted-games/"):
+        path = "projects/" + path[len("hosted-games/") :]
+    if path.startswith("projects/"):
+        return f"{base}/{path}"
+    return "../" + path
 
 
 FALLBACK_ICON = "assets/images/site/game-fallback.png"

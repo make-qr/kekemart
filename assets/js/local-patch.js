@@ -371,7 +371,7 @@
       '';
     if (!src || src === 'about:blank') return;
     var playUrl;
-    if (/hosted-games\//i.test(src)) {
+    if (/hosted-games\//i.test(src) || /^play\//i.test(src)) {
       playUrl = gamesCdnToLocal(src) || withPagePrefix(src.replace(/^\.\.\//, ''));
     } else {
       var resolved = resolvePlayUrl(src) || src;

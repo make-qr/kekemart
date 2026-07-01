@@ -104,6 +104,12 @@
     window.history.replaceState(null, '', url);
   }
 
+  function pipRank(pip) {
+    if (pip === 'hot') return 0;
+    if (pip === 'new') return 1;
+    return 2;
+  }
+
   function buildGames() {
     var catalog = window.WGP_CATALOG || {};
     var games = [];
@@ -119,6 +125,8 @@
         cats: g.cats || [],
         _local: localGamePage(path),
         _source: 'wgp',
+        _featured: !!g.featured,
+        _pip: g.pip || '',
       });
     });
 
@@ -143,6 +151,11 @@
     });
 
     games.sort(function (a, b) {
+      if (a._featured && !b._featured) return -1;
+      if (!a._featured && b._featured) return 1;
+      var pa = pipRank(a._pip);
+      var pb = pipRank(b._pip);
+      if (pa !== pb) return pa - pb;
       if (a._popular && !b._popular) return -1;
       if (!a._popular && b._popular) return 1;
       return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });

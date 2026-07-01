@@ -229,6 +229,33 @@ html[data-native-game] #verdictBanner {
   background: #000;
 }
 
+/* Native CDN games in cross-origin iframe — need click-to-focus for keyboard */
+.player-frame.mm-needs-focus {
+  box-shadow: 0 0 0 2px var(--accent), 0 24px 60px -20px rgba(0, 0, 0, 0.3);
+}
+
+.mm-play-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 6;
+  max-width: calc(100% - 24px);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(15, 17, 24, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  pointer-events: none;
+  text-align: center;
+}
+
+.mm-play-hint.is-hidden {
+  display: none;
+}
+
 .mm-play-actions {
   display: flex;
   flex-wrap: wrap;

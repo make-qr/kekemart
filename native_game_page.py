@@ -251,7 +251,7 @@ def build_native_page(
 
     page = re.sub(
         r'<iframe id="playerIframe"[^>]*src="[^"]*"',
-        f'<iframe id="playerIframe"\n                data-mm-play="{iframe_src}"\n                src="about:blank"',
+        f'<iframe id="playerIframe"\n                data-mm-play="{iframe_src}"\n                src="about:blank"\n                tabindex="0"',
         page,
         count=1,
     )
@@ -416,5 +416,7 @@ def apply_brand_to_page(html: str, *, depth: int = 1) -> str:
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     html = mod.inject_brand_assets(html, depth=depth)
+    html = mod.inject_mm_images(html, depth=depth)
+    html = mod.inject_mm_native_player(html, depth=depth)
     html = mod.inject_rail_features(html, depth=depth)
     return html

@@ -3998,5 +3998,13 @@
     "thumbnail": "assets/images/games/gmg-studios-goal-io/thumbnail.webp",
     "og": "assets/images/games/gmg-studios-goal-io/og.webp",
     "alt": "Goal.io — free online horror game"
+  },
+  "edca0913b0a9db1bb17959c1b4fed8be": {
+    "slug": "gamepush-archer-dungeon-hero",
+    "path": "gamepush/archer-dungeon-hero",
+    "name": "Archer: Dungeon Hero",
+    "thumbnail": "assets/images/games/gamepush-archer-dungeon-hero/thumbnail.webp",
+    "og": "assets/images/games/gamepush-archer-dungeon-hero/og.webp",
+    "alt": "Archer: Dungeon Hero — free online casual game"
   }
 }

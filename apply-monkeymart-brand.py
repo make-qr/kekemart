@@ -279,6 +279,22 @@ def inject_mm_images(html: str, *, depth: int = 0) -> str:
     return html
 
 
+def inject_mm_native_player(html: str, *, depth: int = 0) -> str:
+    if 'data-native-game="1"' not in html and "data-mm-play=" not in html:
+        return html
+    prefix = "../" * depth
+    tag = f'<script src="{prefix}assets/js/mm-native-player.js" defer></script>\n'
+    if "mm-native-player.js" in html:
+        return html
+    needle = f'<script src="{prefix}assets/vendor/wgp/public/v6/js/game.min.js">'
+    if needle in html:
+        return html.replace(needle, tag + needle, 1)
+    needle = f'<script src="{prefix}assets/js/local-patch.js">'
+    if needle in html:
+        return html.replace(needle, needle + "\n" + tag, 1)
+    return html
+
+
 def inject_catalog_scripts(html: str, *, depth: int = 0) -> str:
     prefix = "../" * depth
     if "mm-native-catalog.js" in html and "browse-catalog.js" in html:
@@ -512,6 +528,7 @@ def main() -> None:
         html = path.read_text(encoding="utf-8")
         html2 = inject_brand_assets(html, depth=1)
         html2 = inject_mm_images(html2, depth=1)
+        html2 = inject_mm_native_player(html2, depth=1)
         html2 = inject_rail_features(html2, depth=1)
         html2 = patch_search_placeholder(html2, brand)
         html2 = patch_top_nav(html2, page="games")
