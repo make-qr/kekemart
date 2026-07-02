@@ -1,0 +1,52 @@
+{
+  "brillientgames-com-evony": {
+    "title": "Evony — Play Free Match-3 Puzzle Online | MonkeyMart.one",
+    "description": "Play Evony free in your browser — tap objects, match triples, clear the board. Unity match-3 puzzle by Brillientgames.com. No download on MonkeyMart.one.",
+    "keywords": "evony, evony game, play evony free, evony online, evony unblocked, evony match 3, evony puzzle game, free browser games, monkeymart.one",
+    "genres": ["Action", "Puzzle", "Casual", "Match-3"],
+    "gamePublisher": "Brillientgames.com",
+    "about": [
+      "Evony on MonkeyMart.one is a free browser match-3 puzzle from Brillientgames.com. Tap stacked objects on the board, collect three identical items, and watch matching triples disappear until the level is clear — no download, sign-in, or app store required.",
+      "Built in Unity WebGL, Evony runs directly in your tab on desktop (mouse) and mobile browsers in portrait mode. Levels introduce new object types, hints, and boosters as the puzzles get tougher — ideal for quick breaks or longer streaks.",
+      "Evony is one of our trending Action picks on MonkeyMart.one. If you enjoy tile-matching puzzles, browse more Casual and Puzzle games in the catalogue or jump back to Monkey Mart between rounds."
+    ],
+    "internalLinks": [
+      {"label": "Trending games", "href": "../games-catalogue.html?view=trending"},
+      {"label": "Action games", "href": "../games-catalogue.html?cat=action"},
+      {"label": "Puzzle games", "href": "../games-catalogue.html?cat=puzzles"},
+      {"label": "All games", "href": "../games-catalogue.html"}
+    ],
+    "faqHeading": "Evony — frequently asked questions",
+    "faq": [
+      {
+        "q": "Is Evony free to play online?",
+        "a": "Yes. Evony on MonkeyMart.one is free in your browser. Open the page, press Play, and start matching — no payment or account is required."
+      },
+      {
+        "q": "Do I need to download Evony?",
+        "a": "No download is needed. Evony loads as a Unity WebGL game in your browser tab. Bookmark the page on desktop or Add to Home Screen on mobile for one-tap access."
+      },
+      {
+        "q": "How do you play Evony?",
+        "a": "Tap objects on the board to move them into your collection tray. When three identical items match, they disappear. Clear every object on the board to finish the level. Use hints and boosters on harder stages."
+      },
+      {
+        "q": "Can I play Evony on Chromebook or school WiFi?",
+        "a": "Evony is a browser game with no install step, so it often works on Chromebooks and shared networks where app stores are blocked. If the embed is blocked, try a personal network or ask your admin — we do not host crack or bypass tools."
+      },
+      {
+        "q": "Is this the same Evony as the famous mobile strategy game?",
+        "a": "No. This Evony by Brillientgames.com is a match-3 puzzle game, not the large-scale Evony: The King's Return strategy MMO. The names overlap in search results — here you get a quick tile-matching puzzle in the browser."
+      },
+      {
+        "q": "Does Evony work on mobile?",
+        "a": "Yes. The game is designed for portrait play and responds to touch. Desktop players can use the mouse. A modern browser (Chrome, Safari, Edge, Firefox) gives the best performance."
+      },
+      {
+        "q": "What are hints and boosters in Evony?",
+        "a": "Hints highlight a valid move when you are stuck. Boosters can shuffle the board, remove extra items, or otherwise help you clear tight layouts. Save them for levels where the object stack gets deep."
+      }
+    ],
+    "sitemapChangefreq": "weekly"
+  }
+}

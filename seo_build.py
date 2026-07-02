@@ -216,8 +216,16 @@ def patch_tag_chips(html_text: str, tags: list[str], *, depth: int = 0) -> str:
     )
 
 
-def inject_faq_section(html_text: str, faq: list[dict[str, str]]) -> str:
-    if not faq or 'id="mm-faq"' in html_text:
+def inject_faq_section(
+    html_text: str,
+    faq: list[dict[str, str]],
+    *,
+    heading: str = "Monkey Mart — frequently asked questions",
+    replace: bool = False,
+) -> str:
+    if not faq:
+        return html_text
+    if 'id="mm-faq"' in html_text and not replace:
         return html_text
     items = []
     for item in faq:
@@ -229,14 +237,50 @@ def inject_faq_section(html_text: str, faq: list[dict[str, str]]) -> str:
         )
     section = f"""
         <section class="game-section mm-faq" id="mm-faq">
-          <h3>Monkey Mart — frequently asked questions</h3>
+          <h3>{_esc(heading)}</h3>
 {chr(10).join(items)}
         </section>
 """
+    if 'id="mm-faq"' in html_text:
+        return re.sub(
+            r'<section class="game-section mm-faq" id="mm-faq">.*?</section>\s*',
+            section,
+            html_text,
+            count=1,
+            flags=re.S,
+        )
     return html_text.replace(
         '<section class="game-section spec-card" id="specifications">',
         section + '        <section class="game-section spec-card" id="specifications">',
         1,
+    )
+
+
+def inject_seo_related_links(html_text: str, links: list[dict[str, str]]) -> str:
+    if not links:
+        return html_text
+    link_html = " · ".join(
+        f'<a href="{_esc(item["href"])}">{_esc(item["label"])}</a>' for item in links
+    )
+    block = f"""        <nav class="game-section mm-seo-links" aria-label="Related pages">
+          <p class="mm-seo-links__label">Explore more on MonkeyMart.one</p>
+          <p class="mm-seo-links__items">{link_html}</p>
+        </nav>
+"""
+    if 'class="mm-seo-links"' in html_text:
+        return re.sub(
+            r'<nav class="game-section mm-seo-links"[^>]*>.*?</nav>\s*',
+            block,
+            html_text,
+            count=1,
+            flags=re.S,
+        )
+    return re.sub(
+        r'(</section>\s*)(\s*<section class="game-section game-instructions">)',
+        r"\1\n" + block + r"\2",
+        html_text,
+        count=1,
+        flags=re.S,
     )
 
 
@@ -764,6 +808,99 @@ def patch_page_seo_if_missing(html_text: str, path: Path, brand: dict, root: Pat
     return html_text
 
 
+def load_game_seo_overrides(root: Path | None = None) -> dict[str, dict]:
+    path = (root or ROOT) / "data" / "game-seo-overrides.json"
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def patch_game_seo_override(
+    html_text: str,
+    *,
+    slug: str,
+    override: dict,
+    brand: dict,
+    depth: int = 1,
+) -> str:
+    domain = brand["domain"]
+    rel = f"games/{slug}.html"
+    canonical = abs_url(domain, rel)
+    name = override.get("name") or _title_name(html_text)
+    title = override.get("title") or f"{name} — Play Free Online | MonkeyMart.one"
+    desc = override.get("description") or mm_game_description(name, _meta_content(html_text, "description"))
+    og_image = _meta_content(html_text, "og:image", og=True) or "assets/images/site/og-home.webp"
+    keywords = override.get("keywords") or f"{name.lower()}, {name.lower()} game, play {name.lower()} free, monkey mart, free online games, monkeymart.one"
+    genres = override.get("genres") or ["Browser game", "Free online game"]
+
+    html_text = set_head_meta(
+        html_text,
+        title=title,
+        description=desc,
+        og_image=og_image,
+        canonical=canonical,
+        domain=domain,
+        og_type="website",
+        site_name=brand["siteName"],
+        keywords=keywords,
+    )
+    if override.get("about"):
+        html_text = patch_about_section(html_text, override["about"])
+    if override.get("internalLinks"):
+        html_text = inject_seo_related_links(html_text, override["internalLinks"])
+    if override.get("faq"):
+        html_text = inject_faq_section(
+            html_text,
+            override["faq"],
+            heading=override.get("faqHeading", f"{name} — frequently asked questions"),
+            replace=True,
+        )
+
+    crumbs = breadcrumb_schema(
+        [
+            ("Home", abs_url(domain, "")),
+            ("All games", abs_url(domain, "games-catalogue.html")),
+            (name, canonical),
+        ]
+    )
+    game_schema = video_game_schema(
+        name=name,
+        description=desc,
+        url=canonical,
+        image=og_image,
+        domain=domain,
+        genre=genres[:6],
+    )
+    if pub := override.get("gamePublisher"):
+        game_schema["author"] = {"@type": "Organization", "name": pub}
+
+    schemas: list[dict] = [game_schema, crumbs]
+    if override.get("faq"):
+        schemas.append(faq_schema(override["faq"]))
+    return inject_json_ld(html_text, schemas)
+
+
+def patch_all_game_seo_overrides(root: Path, brand: dict) -> int:
+    overrides = load_game_seo_overrides(root)
+    if not overrides:
+        return 0
+    count = 0
+    for slug, override in overrides.items():
+        path = root / "games" / f"{slug}.html"
+        if not path.is_file():
+            continue
+        html = path.read_text(encoding="utf-8", errors="replace")
+        patched = patch_game_seo_override(html, slug=slug, override=override, brand=brand, depth=1)
+        if patched != html:
+            path.write_text(patched, encoding="utf-8")
+            count += 1
+    return count
+
+
 def patch_all_seo_under(root: Path, brand: dict) -> int:
     count = 0
     for path in root.rglob("*.html"):
@@ -789,6 +926,10 @@ def collect_sitemap_urls(brand: dict) -> list[tuple[str, str, Path | None]]:
         seen.add(loc)
         urls.append((loc, freq, path))
 
+    priority_slugs = {
+        slug: cfg.get("sitemapChangefreq", "weekly")
+        for slug, cfg in load_game_seo_overrides(ROOT).items()
+    }
     skip_parts = ("assets/vendor", "hosted-games/", "templates/")
     for path in sorted(ROOT.rglob("*.html")):
         if any(part in str(path) for part in skip_parts):
@@ -799,7 +940,11 @@ def collect_sitemap_urls(brand: dict) -> list[tuple[str, str, Path | None]]:
         elif rel.name == "index.html":
             add(abs_url(domain, f"{rel.parent.as_posix()}/"), "monthly", path)
         elif rel.parts[:1] == ("games",):
-            freq = "weekly" if rel.name.startswith("mm-") else "monthly"
+            slug = rel.stem
+            if slug in priority_slugs:
+                freq = priority_slugs[slug]
+            else:
+                freq = "weekly" if rel.name.startswith("mm-") else "monthly"
             add(abs_url(domain, rel.as_posix()), freq, path)
         elif rel.name == "monkey-mart.html":
             add(abs_url(domain, "monkey-mart.html"), "weekly", path)

@@ -581,10 +581,14 @@ def main() -> None:
     n = patch_all_html_under(ROOT, brand)
     print(f"Applied GA/AdSense/CDN/footer on {n} HTML files")
 
-    from seo_build import patch_all_seo_under
+    from seo_build import patch_all_game_seo_overrides, patch_all_seo_under
 
     seo_n = patch_all_seo_under(ROOT, brand)
     print(f"Applied JSON-LD / SEO meta on {seo_n} HTML files")
+
+    override_n = patch_all_game_seo_overrides(ROOT, brand)
+    if override_n:
+        print(f"Applied priority game SEO overrides on {override_n} pages")
 
     # Re-apply top-nav after bulk passes
     nav_n = 0

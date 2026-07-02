@@ -449,6 +449,29 @@ html[data-native-game] #verdictBanner {
   line-height: 1.55;
 }
 
+.mm-seo-links {
+  padding: 12px 0 4px;
+}
+
+.mm-seo-links__label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.mm-seo-links__items {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mm-seo-links__items a {
+  font-weight: 600;
+}
+
 /* 404 page */
 .shell--404 {
   max-width: 1200px;
