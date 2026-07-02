@@ -365,6 +365,48 @@ html[data-native-game] #verdictBanner {
   text-decoration: underline;
 }
 
+.mm-game-bottom {
+  margin-top: 8px;
+}
+
+.mm-game-bottom .grid-dense {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.mm-game-bottom .section-head + .grid-dense {
+  margin-bottom: 14px;
+}
+
+/* Slim sidebar — Discover only keeps core nav */
+.rail-section--business[hidden],
+.rail-item[hidden] {
+  display: none !important;
+}
+
+.rail-item--monkeymart .ico {
+  color: #16a34a;
+}
+
+.catalog-classics-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.catalog-classics-chips .chip {
+  font-size: 13px;
+}
+
+.mm-game-bottom .section-head:first-child {
+  margin-top: 4px;
+}
+
+.mm-game-recommend-head[hidden] + #grid-game-recommend:empty {
+  display: none;
+}
+
 .mm-home-classics {
   margin-top: 4px;
 }

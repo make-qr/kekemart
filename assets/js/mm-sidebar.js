@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  var CFG = window.MM_BRAND || {};
   var prefix = location.pathname.indexOf('/games/') !== -1 ? '../' : '';
 
   var NATIVE_CATS = [
@@ -17,51 +16,68 @@
     { slug: 'puzzle', label: 'Puzzle', match: function (cats) { return (cats || []).indexOf('Puzzle') !== -1; } },
   ];
 
-  function countNative(filter) {
-    var cat = window.MM_NATIVE_CATALOG || {};
-    var n = 0;
-    Object.keys(cat).forEach(function (slug) {
-      var g = cat[slug];
-      if (!g) return;
-      if (!filter || filter(g.cats || [])) n++;
-    });
-    return n;
+  var DISCOVER_HIDE_IDS = [
+    'challengeRailBtn',
+    'trendingRailBtn',
+    'playedRailBtn',
+    'hotnotRailBtn',
+    'myPicksRailBtn',
+  ];
+
+  function discoverSection() {
+    var rail = document.getElementById('rail');
+    if (!rail) return null;
+    var sections = rail.querySelectorAll('.rail-section');
+    for (var i = 0; i < sections.length; i++) {
+      var h = sections[i].querySelector('h4');
+      if (h && /discover/i.test(h.textContent || '')) return sections[i];
+    }
+    return rail.querySelector('.rail-section:not(.rail-section--business):not(.rail-section--you):not(.rail-section--mm)');
   }
 
-  function injectRailSection() {
+  function removeClassicsRail() {
+    document.querySelectorAll('.rail-section--mm').forEach(function (el) {
+      el.remove();
+    });
+  }
+
+  function trimDiscoverRail() {
     var rail = document.getElementById('rail');
-    if (!rail || document.getElementById('mmRailClassics')) return false;
+    if (!rail) return;
 
-    var nativeTotal = countNative();
-    if (!nativeTotal) return false;
+    removeClassicsRail();
 
-    var section = document.createElement('div');
-    section.className = 'rail-section rail-section--mm';
-    section.innerHTML =
-      '<h4>MonkeyMart classics</h4>' +
-      '<a class="rail-item" id="mmRailClassics" href="' + prefix + 'games-catalogue.html?cat=monkeymart-classics">' +
-      '<span class="ico" style="color:#16a34a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>' +
-      '<span class="label">All classics</span><span class="count">' + nativeTotal + '</span></a>';
+    var biz = rail.querySelector('.rail-section--business');
+    if (biz) biz.hidden = true;
 
-    NATIVE_CATS.slice(1).forEach(function (c) {
-      var n = countNative(c.match);
-      if (n < 2) return;
-      section.innerHTML +=
-        '<a class="rail-item rail-item--mm-cat" href="' + prefix + 'games-catalogue.html?cat=' + encodeURIComponent(c.slug) + '">' +
-        '<span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></span>' +
-        '<span class="label">' + c.label + '</span><span class="count">' + n + '</span></a>';
+    DISCOVER_HIDE_IDS.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.hidden = true;
     });
 
-    var discover = rail.querySelector('.rail-section:not(.rail-section--business):not(.rail-section--you):not(.rail-section--mm)');
-    var you = rail.querySelector('.rail-section--you');
-    if (you) {
-      rail.insertBefore(section, you);
-    } else if (discover) {
-      discover.parentNode.insertBefore(section, discover.nextSibling);
-    } else {
-      rail.appendChild(section);
-    }
-    return true;
+    ensureMonkeyMartLink();
+  }
+
+  function ensureMonkeyMartLink() {
+    if (document.getElementById('mmRailMonkeyMart')) return;
+    var discover = discoverSection();
+    if (!discover) return;
+
+    var home =
+      discover.querySelector('a.rail-item[href*="index"]') ||
+      discover.querySelector('a.rail-item');
+    if (!home) return;
+
+    var mm = document.createElement('a');
+    mm.className = 'rail-item rail-item--monkeymart';
+    mm.id = 'mmRailMonkeyMart';
+    mm.href = prefix + 'monkey-mart.html';
+    mm.setAttribute('aria-label', 'Play Monkey Mart');
+    mm.innerHTML =
+      '<span class="ico" style="color:#16a34a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M3 9l2-5h14l2 5"/><path d="M9 21v-6h6v6"/></svg></span>' +
+      '<span class="label">Monkey Mart</span>';
+
+    home.insertAdjacentElement('afterend', mm);
   }
 
   function patchCatalogChips() {
@@ -100,34 +116,22 @@
     }
     var s = document.createElement('script');
     s.src = prefix + 'assets/js/mm-native-catalog.js';
-    s.onload = function () {
-      done();
-    };
-    s.onerror = function () {
-      done();
-    };
+    s.onload = done;
+    s.onerror = done;
     document.head.appendChild(s);
   }
 
-  function ensureClassicsRail() {
-    if (injectRailSection()) return;
-    var tries = 0;
-    var timer = setInterval(function () {
-      tries += 1;
-      if (injectRailSection() || tries >= 30) clearInterval(timer);
-    }, 150);
-  }
-
   function run() {
+    trimDiscoverRail();
     loadNativeCatalog(function () {
-      ensureClassicsRail();
+      trimDiscoverRail();
       wireCategories();
       patchCatalogChips();
       if (window.MM_RAIL_SYNC && window.MM_RAIL_SYNC.sync) {
         window.MM_RAIL_SYNC.sync();
       }
       setTimeout(function () {
-        ensureClassicsRail();
+        trimDiscoverRail();
         wireCategories();
         if (window.MM_RAIL_SYNC && window.MM_RAIL_SYNC.syncCounts) {
           window.MM_RAIL_SYNC.syncCounts();

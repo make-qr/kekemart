@@ -166,7 +166,6 @@ def patch_related_sidebar(
     )
     page = page.replace("More Casual games", f"More {cat} games")
     page = page.replace("<h4>by GAMEPUSH</h4>", "<h4>by MonkeyMart.one</h4>")
-    page = page.replace("More from GAMEPUSH", "More MonkeyMart classics")
     return page
 
 

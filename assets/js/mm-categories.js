@@ -274,7 +274,7 @@
 
     var railTop = document.getElementById('railCatTop');
     var railMore = document.getElementById('railCatMore');
-    var TOP_N = 15;
+    var TOP_N = 8;
 
     function railItem(c) {
       var icon = (c.icon || '').replace('<svg ', '<svg width="18" height="18" ');

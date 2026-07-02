@@ -234,6 +234,32 @@ def inject_rail_features(html: str, *, depth: int = 0) -> str:
     html = inject_native_catalog(html, depth=depth)
     html = inject_rail_modals(html)
     html = inject_rail_scripts(html, depth=depth)
+    html = inject_game_bottom_scripts(html, depth=depth)
+    return html
+
+
+def inject_game_bottom_scripts(html: str, *, depth: int = 0) -> str:
+    """Shared trending/new grids + favourites-based recommendations on game pages."""
+    if 'id="mmGameBottom"' not in html and 'data-page="game"' not in html:
+        return html
+    prefix = "../" * depth
+    grids_tag = f'<script src="{prefix}assets/js/wg-grids-data.js"></script>\n'
+    bottom_tag = f'<script src="{prefix}assets/js/mm-game-bottom.js" defer></script>\n'
+    catalog_tag = f'<script src="{prefix}assets/js/wg-catalog.js"></script>\n'
+
+    patch_needle = f'<script src="{prefix}assets/js/local-patch.js">'
+    if patch_needle in html and "wg-grids-data.js" not in html:
+        html = html.replace(patch_needle, grids_tag + patch_needle, 1)
+
+    chrome = f'<script src="{prefix}assets/vendor/wgp/public/v6/js/chrome.min.js">'
+    if chrome in html and "wg-catalog.js" not in html:
+        html = html.replace(chrome, catalog_tag + chrome, 1)
+
+    brand_needle = f'<script src="{prefix}assets/js/monkeymart-config.js" defer>'
+    if brand_needle in html and "mm-game-bottom.js" not in html:
+        html = html.replace(brand_needle, bottom_tag + brand_needle, 1)
+    elif "mm-game-bottom.js" not in html:
+        html = html.replace("</body>", bottom_tag + "</body>", 1)
     return html
 
 
@@ -477,6 +503,8 @@ def main() -> None:
     import sys
 
     subprocess.run([sys.executable, str(ROOT / "build-404-page.py")], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(ROOT / "build-wg-grids-data.py")], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(ROOT / "patch-game-bottom-section.py")], cwd=ROOT, check=True)
     pages = [ROOT / "index.html", ROOT / "games-catalogue.html", ROOT / "404.html"]
     for path in pages:
         if not path.exists():

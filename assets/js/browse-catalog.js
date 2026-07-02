@@ -89,16 +89,29 @@
 
   function parseQuery() {
     var params = new URLSearchParams(window.location.search);
+    var view = (params.get('view') || '').toLowerCase();
+    if (view !== 'trending' && view !== 'new') {
+      var sort = params.get('sort');
+      if (sort === '1') view = 'trending';
+      else if (sort === '2') view = 'new';
+      else view = '';
+    }
     return {
       q: (params.get('q') || '').trim(),
       cat: (params.get('cat') || '').trim().toLowerCase(),
+      view: view,
     };
   }
 
-  function pushQuery(q, cat) {
+  function pushQuery(q, cat, view) {
     var params = new URLSearchParams();
-    if (q) params.set('q', q);
-    if (cat) params.set('cat', cat);
+    if (view) {
+      params.set('view', view);
+      if (q) params.set('q', q);
+    } else {
+      if (q) params.set('q', q);
+      if (cat) params.set('cat', cat);
+    }
     var qs = params.toString();
     var url = window.location.pathname.split('/').pop() + (qs ? '?' + qs : '');
     window.history.replaceState(null, '', url);
@@ -108,6 +121,42 @@
     if (pip === 'hot') return 0;
     if (pip === 'new') return 1;
     return 2;
+  }
+
+  function getGrids() {
+    if (window.__WG_GRIDS__) return window.__WG_GRIDS__;
+    return (window.WG_DATA && window.WG_DATA.grids) || {};
+  }
+
+  function gridItemToGame(item) {
+    var url = item.url || '';
+    var local = url;
+    var routes = window.WGP_GAME_ROUTES || {};
+    if (routes[url]) {
+      local = routes[url];
+    } else {
+      var m = url.match(/\/game\/(.+?)\/?$/);
+      if (m) local = 'games/' + m[1].replace(/\//g, '-') + '.html';
+    }
+    if (window.MM_normalizeGameHref) local = window.MM_normalizeGameHref(local) || local;
+    return {
+      path: '',
+      name: item.name || '',
+      by: item.by || '',
+      img: item.img || '',
+      c: item.c || '#6366f1',
+      cats: item.cats || [],
+      _local: local,
+      _source: 'grid',
+      _pip: item.pip || '',
+    };
+  }
+
+  function gamesFromView(view) {
+    var grids = getGrids();
+    var list = view === 'trending' ? grids.trending : view === 'new' ? grids.new : null;
+    if (!list || !list.length) return null;
+    return list.map(gridItemToGame);
   }
 
   function buildGames() {
@@ -182,6 +231,90 @@
 
   var PAGE_SIZE = 60;
 
+  var CLASSICS_SUB = [
+    'monkeymart-classics',
+    'fnaf',
+    'moto-x3m',
+    'vex',
+    'fireboy-and-watergirl',
+    'snail-bob',
+    'racing',
+    'puzzle',
+  ];
+
+  function isClassicsCat(cat) {
+    return CLASSICS_SUB.indexOf(cat) !== -1;
+  }
+
+  function classicsSubLabel(slug) {
+    if (window.MM_CATEGORIES && window.MM_CATEGORIES.labelForSlug) {
+      return window.MM_CATEGORIES.labelForSlug(slug);
+    }
+    return slug;
+  }
+
+  function countNativeSlug(slug, games) {
+    return games.filter(function (g) {
+      if (g._source !== 'native') return false;
+      if (!window.MM_CATEGORIES || !window.MM_CATEGORIES.gameMatchesSlug) {
+        return slug === 'monkeymart-classics';
+      }
+      return window.MM_CATEGORIES.gameMatchesSlug(
+        { cats: g.cats, _source: g._source, source: g._source },
+        slug
+      );
+    }).length;
+  }
+
+  function renderClassicsSubChips(state) {
+    var chips = document.getElementById('catalogChips');
+    if (!chips || state.view) return;
+
+    var existing = document.getElementById('catalogClassicsChips');
+    if (!isClassicsCat(state.cat)) {
+      if (existing) existing.remove();
+      return;
+    }
+
+    var wrap = existing || document.createElement('div');
+    wrap.id = 'catalogClassicsChips';
+    wrap.className = 'catalog-classics-chips';
+    wrap.setAttribute('aria-label', 'MonkeyMart classics filters');
+
+    var html = '';
+    CLASSICS_SUB.forEach(function (slug) {
+      var n = countNativeSlug(slug, state.games);
+      if (slug !== 'monkeymart-classics' && n < 2) return;
+      var active = state.cat === slug;
+      html +=
+        '<button type="button" class="chip' +
+        (active ? ' active' : '') +
+        '" data-cat="' +
+        esc(slug) +
+        '">' +
+        esc(classicsSubLabel(slug)) +
+        ' <span class="count">' +
+        n +
+        '</span></button>';
+    });
+    wrap.innerHTML = html;
+
+    if (!existing) {
+      chips.insertAdjacentElement('afterend', wrap);
+      wrap.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-cat]');
+        if (!btn) return;
+        state.cat = btn.getAttribute('data-cat') || '';
+        state.view = '';
+        state.visible = PAGE_SIZE;
+        pushQuery(state.q, state.cat, '');
+        renderChips(state);
+        renderClassicsSubChips(state);
+        render(state);
+      });
+    }
+  }
+
   function render(state) {
     var grid = document.getElementById('catalogGrid');
     var empty = document.getElementById('catalogEmpty');
@@ -211,7 +344,9 @@
           : filtered.length + ' games';
     }
     var label = 'All games';
-    if (state.cat) {
+    if (state.view === 'trending') label = 'Trending now';
+    else if (state.view === 'new') label = 'New releases';
+    else if (state.cat) {
       if (window.MM_CATEGORIES && window.MM_CATEGORIES.labelForSlug) {
         label = window.MM_CATEGORIES.labelForSlug(state.cat);
       } else {
@@ -233,12 +368,21 @@
       crumb.textContent = label;
     }
     if (subtitle) {
-      var nativeN = state.games.filter(function (g) { return g._source === 'native'; }).length;
-      var wgpN = state.games.length - nativeN;
-      subtitle.textContent =
-        'Play ' + state.games.length + ' free browser games — ' +
-        nativeN + ' MonkeyMart classics + ' + wgpN + ' casual titles. No download.';
+      if (state.view === 'trending') {
+        subtitle.textContent = 'Hot picks right now — same list as the home page trending row.';
+      } else if (state.view === 'new') {
+        subtitle.textContent = 'Fresh releases — same list as the home page new row.';
+      } else {
+        var nativeN = state.games.filter(function (g) { return g._source === 'native'; }).length;
+        var wgpN = state.games.length - nativeN;
+        subtitle.textContent =
+          'Play ' + state.games.length + ' free browser games — ' +
+          nativeN + ' MonkeyMart classics + ' + wgpN + ' casual titles. No download.';
+      }
     }
+    var chipsWrap = document.getElementById('catalogChips');
+    if (chipsWrap) chipsWrap.hidden = !!state.view;
+    renderClassicsSubChips(state);
     if (empty) empty.hidden = filtered.length > 0;
     if (loadBtn) {
       var more = slice.length < filtered.length;
@@ -259,11 +403,23 @@
   function renderChips(state) {
     var wrap = document.getElementById('catalogChips');
     if (!wrap) return;
+    var nativeTotal = state.games.filter(function (g) {
+      return g._source === 'native';
+    }).length;
     var html =
       '<button type="button" class="chip' +
       (state.cat ? '' : ' active') +
       '" data-cat="">All</button>';
+    if (nativeTotal) {
+      html +=
+        '<button type="button" class="chip' +
+        (state.cat === 'monkeymart-classics' ? ' active' : '') +
+        '" data-cat="monkeymart-classics">MonkeyMart classics <span class="count">' +
+        nativeTotal +
+        '</span></button>';
+    }
     state.categories.forEach(function (c) {
+      if (c.slug === 'monkeymart-classics') return;
       var active =
         state.cat === c.slug || (state.cat && catSlugLoose(c.name) === state.cat);
       html +=
@@ -281,38 +437,45 @@
   }
 
   function init() {
-    var games = buildGames();
-    var categories = buildChipCategories(games);
     var query = parseQuery();
+    var viewGames = query.view ? gamesFromView(query.view) : null;
+    var games = viewGames || buildGames();
+    var categories = viewGames ? [] : buildChipCategories(games);
     var searchInput = document.getElementById('catalogSearchInput');
 
     var state = {
       games: games,
       categories: categories,
       q: query.q,
-      cat: query.cat,
+      cat: viewGames ? '' : query.cat,
+      view: query.view,
       visible: PAGE_SIZE,
     };
 
     if (searchInput) searchInput.value = state.q;
 
     renderChips(state);
+    renderClassicsSubChips(state);
     render(state);
 
     document.getElementById('catalogChips')?.addEventListener('click', function (e) {
       var btn = e.target.closest('[data-cat]');
       if (!btn) return;
       state.cat = btn.getAttribute('data-cat') || '';
+      state.view = '';
+      state.games = buildGames();
+      state.categories = buildChipCategories(state.games);
       state.visible = PAGE_SIZE;
-      pushQuery(state.q, state.cat);
+      pushQuery(state.q, state.cat, '');
       renderChips(state);
+      renderClassicsSubChips(state);
       render(state);
     });
 
     searchInput?.addEventListener('input', function () {
       state.q = searchInput.value.trim();
       state.visible = PAGE_SIZE;
-      pushQuery(state.q, state.cat);
+      pushQuery(state.q, state.cat, state.view);
       render(state);
     });
 

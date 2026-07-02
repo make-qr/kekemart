@@ -15,6 +15,8 @@ cd "$SRC"
 python3 import-monkeymart-games.py --source "$NATIVE_SRC"
 python3 build-seo-assets.py
 python3 build-404-page.py
+python3 build-wg-grids-data.py
+python3 patch-game-bottom-section.py
 
 mkdir -p "$DEST"
 rsync -a --delete \
